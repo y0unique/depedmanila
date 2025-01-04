@@ -276,85 +276,102 @@
         <!-- Carousel End -->
 
         <!-- Issuances Start -->
-        <section class="section" id="LatestIssuances">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-12 text-center">
-                        <div class="section-title">
-                            <h4 class="title text-uppercase mb-4">RECENT ISSUANCES</h4>
-                            <p class="text-danger">For more issuances click <a href="issuances" class="text-primary">here</a></p>
-                            <p class="text-danger mx-auto para-desc mb-0" style="font-style: italic;"> *For past issuances click <a class="past-issuances text-primary" href="issuances.php#pastIssuances">here</a>*</p>
+        <!-- Issuances Start -->
+<section class="section" id="LatestIssuances">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 text-center">
+                <div class="section-title">
+                    <h4 class="title text-uppercase mb-4">RECENT ISSUANCES</h4>
+                    <p class="text-danger">For more issuances click <a href="issuances" class="text-primary">here</a></p>
+                    <p class="text-danger mx-auto para-desc mb-0" style="font-style: italic;"> 
+                        *For past issuances click <a class="past-issuances text-primary" href="issuances.php#pastIssuances">here</a>*
+                    </p>
+                </div>
+            </div><!--end col-->
+        </div><!--end row-->
+        
+        <div class="row mt-4">
+            <div class="col-12">
+                <!-- Tab navigation -->
+                <ul class="nav nav-pills nav-justified" id="pills-tab" role="tablist">
+                    <!-- Dynamic items will be appended here -->
+                </ul><!--end nav pills-->
 
-                        </div>
+                <!-- Tab content -->
+                <div class="tab-content mt-3" id="pills-tabContent">
+                    <!-- Dynamic content will be appended here -->
+                </div><!--end tab content-->
+            </div><!--end col-->
+        </div><!--end row-->
+    </div><!--end container-->
+</section><!--end section-->
+<!-- Issuances End -->
+
+<script>
+    // Array containing issuance types and their corresponding icons
+    const issuancesType = [
+        { id: "numbered-memorandum", icon: "mdi-bullhorn", title: "NUMBERED MEMORANDUM" },
+        { id: "division-advisories", icon: "mdi-note", title: "DIVISION ADVISORIES" },
+        { id: "division-circulars", icon: "mdi-email", title: "DIVISION CIRCULARS" },
+        { id: "office-order", icon: "mdi-file-multiple", title: "OFFICE ORDER" }
+    ];
+
+    const pillsTab = document.getElementById("pills-tab");
+    const pillsTabContent = document.getElementById("pills-tabContent");
+
+    // Generate tabs and content dynamically
+    issuancesType.forEach((issuance, index) => {
+        const isActive = index === 0 ? "active" : "";
+        const isActivePane = index === 0 ? "show active" : "";
+
+        // Create tab item
+        const tabItem = document.createElement("li");
+        tabItem.className = "nav-item mb-4 pt-2";
+        tabItem.innerHTML = `
+            <a class="nav-link ${isActive}" id="${issuance.id}-tab" data-toggle="pill" href="#${issuance.id}" role="tab" 
+               aria-controls="${issuance.id}" aria-selected="${index === 0}">
+                <div class="capabilities text-center rounded pt-2 pb-2">
+                    <div class="icon bg-custom mb-3">
+                        <i class="mdi ${issuance.icon} text-white"></i>
+                    </div>
+                    <h4 class="title font-weight-normal mb-0">${issuance.title}</h4>
+                </div>
+            </a>
+        `;
+        pillsTab.appendChild(tabItem);
+
+        // Create tab content
+        const tabContent = document.createElement("div");
+        tabContent.className = `tab-pane fade ${isActivePane}`;
+        tabContent.id = issuance.id;
+        tabContent.setAttribute("role", "tabpanel");
+        tabContent.setAttribute("aria-labelledby", `${issuance.id}-tab`);
+        tabContent.innerHTML = `
+            <div class="capabilities-content border rounded p-4">
+                <div class="row align-items-center">
+                    <div class="col-md-12">
+                        <h4 class="title">${issuance.title}</h4>
+                        <table id="${issuance.id}-tableindex" class="table table-striped" style="width:100%">
+                            <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>No.</th>
+                                    <th>Title</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Data rows can be appended here dynamically -->
+                            </tbody>
+                        </table>
                     </div><!--end col-->
                 </div><!--end row-->
-                
-                <div class="row mt-4">
-                    <div class="col-12">
-                        <!-- Tab navigation -->
-                        <ul class="nav nav-pills nav-justified" id="pills-tab" role="tablist">
-                            <?php
-                                // Array containing issuance types and their corresponding icons
-                                $issuancestype1 = array(
-                                    "numbered-memorandum" => array("mdi-bullhorn", "NUMBERED MEMORANDUM"),
-                                    "division-advisories" => array("mdi-note", "DIVISION ADVISORIES"),
-                                    "division-circulars" => array("mdi-email", "DIVISION CIRCULARS"),
-                                    "office-order" => array("mdi-file-multiple", "OFFICE ORDER"),
-                                );
+            </div>
+        `;
+        pillsTabContent.appendChild(tabContent);
+    });
+</script>
 
-                                // Iterate through the issuance types array to generate tabs
-                                foreach ($issuancestype1 as $tabId => $tabInfo) {
-                                    $iconClass = $tabInfo[0];
-                                    $title = $tabInfo[1];
-                                    $isActive = ($tabId === "numbered-memorandum") ? "active" : "";
-                                    echo '<li class="nav-item mb-4 pt-2">';
-                                    echo '<a class="nav-link ' . $isActive . '" id="' . $tabId . '-tab" data-toggle="pill" href="#' . $tabId . '" role="tab" aria-controls="' . $tabId . '" aria-selected="false">';
-                                    echo '<div class="capabilities text-center rounded pt-2 pb-2">';
-                                    echo '<div class="icon bg-custom mb-3">';
-                                    echo '<i class="mdi ' . $iconClass . ' text-white"></i>';
-                                    echo '</div>';
-                                    echo '<h4 class="title font-weight-normal mb-0">' . $title . '</h4>';
-                                    echo '</div>';
-                                    echo '</a><!--end nav link-->';
-                                    echo '</li><!--end nav item-->';
-                                }
-                            ?>
-                        </ul><!--end nav pills-->
-
-                        <!-- Tab content -->
-                        <div class="tab-content mt-3" id="pills-tabContent">
-                            <?php
-                                // Iterate through the issuance types array to generate tab content
-                                foreach ($issuancestype1 as $tabId => $tabInfo) {
-                                    $isActive = ($tabId === "numbered-memorandum") ? "show active" : "";
-                                    echo '<div class="tab-pane fade ' . $isActive . '" id="' . $tabId . '" role="tabpanel" aria-labelledby="' . $tabId . '-tab">';
-                                    echo '<div class="capabilities-content border rounded p-4">';
-                                    echo '<div class="row align-items-center">';
-                                    echo '<div class="col-md-12">';
-                                    echo '<h4 class="title">' . $tabInfo[1] . '</h4>';
-                                    echo '<table id="' . $tabId . '-tableindex" class="table table-striped" style="width:100%">';
-                                        echo '<thead>';
-                                            echo '<tr>';
-                                                echo '<th>Date</th> ';
-                                                echo '<th>No.</th>  ';
-                                                echo '<th>Title</th>';
-                                            echo '</tr>';
-                                        echo '</thead>';
-                                    echo '<tbody>';
-                                    
-                                    echo '</tbody>';
-                                    echo '</table>';
-                                    echo '</div><!--end col-->';
-                                    echo '</div><!--end row-->';
-                                    echo '</div>';
-                                    echo '</div><!--end teb pane-->';
-                                }
-                            ?>
-                        </div><!--end tab content-->
-                    </div><!--end col-->
-                </div><!--end row-->
-            </div><!--end container-->
-        </section><!--end section-->
         <!-- Issuances End -->
 
         <!-- Services Start -->

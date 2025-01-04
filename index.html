@@ -112,8 +112,8 @@
                     <ul class="navbar-nav ml-auto">
         
                         <!-- home -->
-                        <li class="nav-item" id="index">
-                            <a class="nav-link" href="index">Home</a>
+                        <li class="nav-item active" id="index">
+                            <a class="nav-link" href="#home">Home</a>
                         </li>
         
                         <!-- about us -->
@@ -123,10 +123,10 @@
                             </a>
         
                             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <a class="dropdown-item" href="history" id="history">History</a>
-                                <a class="dropdown-item" href="mission-vision" id="visionMision">Mission, Vision.  <br>Core Values, Quality Objectives</a>
-                                <a class="dropdown-item" href="directory" id="directory">Directory</a>
-                                <a class="dropdown-item" href="underconstruction" id="citizenscharter">Citizen's Charter</a>
+                                <a class="dropdown-item" href="history.html" id="history">History</a>
+                                <a class="dropdown-item" href="mission-vision.html" id="visionMision">Mission, Vision.  <br>Core Values, Quality Objectives</a>
+                                <a class="dropdown-item" href="directory.html" id="directory">Directory</a>
+                                <a class="dropdown-item" href="underconstruction.html" id="citizenscharter">Citizen's Charter</a>
                             </div>
                         </li>
         
@@ -136,7 +136,7 @@
                                 Transparencies
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <a class="dropdown-item" href="transparencies">
+                                <a class="dropdown-item" href="transparencies.html">
                                     Transparencies
                                 </a>
         
@@ -146,15 +146,15 @@
                                     BAC
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink1">
-                                    <a class="dropdown-item" href="underconstruction">PhilGEPS</a>
-                                    <a class="dropdown-item" href="underconstruction">Invitation To Bid</a>
-                                    <a class="dropdown-item" href="underconstruction">Request for Quotation</a>
-                                    <a class="dropdown-item" href="underconstruction">Bid Bulletin</a>
-                                    <a class="dropdown-item" href="underconstruction">Awarded</a>
-                                    <a class="dropdown-item" href="underconstruction">Annual Procurement Plan</a>
-                                    <a class="dropdown-item" href="underconstruction">Project Procurement Management Plan</a>
-                                    <a class="dropdown-item" href="underconstruction">Procurement Monitoring Report</a>
-                                    <a class="dropdown-item" href="underconstruction">Agency Procurement Compliannce and Performance Indicators</a>
+                                    <a class="dropdown-item" href="underconstruction.html">PhilGEPS</a>
+                                    <a class="dropdown-item" href="underconstruction.html">Invitation To Bid</a>
+                                    <a class="dropdown-item" href="underconstruction.html">Request for Quotation</a>
+                                    <a class="dropdown-item" href="underconstruction.html">Bid Bulletin</a>
+                                    <a class="dropdown-item" href="underconstruction.html">Awarded</a>
+                                    <a class="dropdown-item" href="underconstruction.html">Annual Procurement Plan</a>
+                                    <a class="dropdown-item" href="underconstruction.html">Project Procurement Management Plan</a>
+                                    <a class="dropdown-item" href="underconstruction.html">Procurement Monitoring Report</a>
+                                    <a class="dropdown-item" href="underconstruction.html">Agency Procurement Compliannce and Performance Indicators</a>
                                 </div>
                                     
                             </div>
@@ -167,7 +167,7 @@
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                                 <li>
-                                    <a class="dropdown-item" href="issuances">Division Office</a>
+                                    <a class="dropdown-item" href="issuances">.htmlDivision Office</a>
                                 </li>
                                 <div class="dropdown-divider"></div>
                                 <li>
@@ -225,7 +225,7 @@
         
                         <!-- resources -->
                         <li class="nav-item" id="resources">
-                            <a class="nav-link" href="resources">Resources</a>
+                            <a class="nav-link" href="resources.html">Resources</a>
                         </li>
         
                     </ul><!--end navbar nav-->
@@ -293,10 +293,63 @@
                     <div class="col-12">
                         <!-- Tab navigation -->
                         <ul class="nav nav-pills nav-justified" id="pills-tab" role="tablist">
+                            <?php
+                                // Array containing issuance types and their corresponding icons
+                                $issuancestype1 = array(
+                                    "numbered-memorandum" => array("mdi-bullhorn", "NUMBERED MEMORANDUM"),
+                                    "division-advisories" => array("mdi-note", "DIVISION ADVISORIES"),
+                                    "division-circulars" => array("mdi-email", "DIVISION CIRCULARS"),
+                                    "office-order" => array("mdi-file-multiple", "OFFICE ORDER"),
+                                );
+
+                                // Iterate through the issuance types array to generate tabs
+                                foreach ($issuancestype1 as $tabId => $tabInfo) {
+                                    $iconClass = $tabInfo[0];
+                                    $title = $tabInfo[1];
+                                    $isActive = ($tabId === "numbered-memorandum") ? "active" : "";
+                                    echo '<li class="nav-item mb-4 pt-2">';
+                                    echo '<a class="nav-link ' . $isActive . '" id="' . $tabId . '-tab" data-toggle="pill" href="#' . $tabId . '" role="tab" aria-controls="' . $tabId . '" aria-selected="false">';
+                                    echo '<div class="capabilities text-center rounded pt-2 pb-2">';
+                                    echo '<div class="icon bg-custom mb-3">';
+                                    echo '<i class="mdi ' . $iconClass . ' text-white"></i>';
+                                    echo '</div>';
+                                    echo '<h4 class="title font-weight-normal mb-0">' . $title . '</h4>';
+                                    echo '</div>';
+                                    echo '</a><!--end nav link-->';
+                                    echo '</li><!--end nav item-->';
+                                }
+                            ?>
                         </ul><!--end nav pills-->
 
                         <!-- Tab content -->
                         <div class="tab-content mt-3" id="pills-tabContent">
+                            <?php
+                                // Iterate through the issuance types array to generate tab content
+                                foreach ($issuancestype1 as $tabId => $tabInfo) {
+                                    $isActive = ($tabId === "numbered-memorandum") ? "show active" : "";
+                                    echo '<div class="tab-pane fade ' . $isActive . '" id="' . $tabId . '" role="tabpanel" aria-labelledby="' . $tabId . '-tab">';
+                                    echo '<div class="capabilities-content border rounded p-4">';
+                                    echo '<div class="row align-items-center">';
+                                    echo '<div class="col-md-12">';
+                                    echo '<h4 class="title">' . $tabInfo[1] . '</h4>';
+                                    echo '<table id="' . $tabId . '-tableindex" class="table table-striped" style="width:100%">';
+                                        echo '<thead>';
+                                            echo '<tr>';
+                                                echo '<th>Date</th> ';
+                                                echo '<th>No.</th>  ';
+                                                echo '<th>Title</th>';
+                                            echo '</tr>';
+                                        echo '</thead>';
+                                    echo '<tbody>';
+                                    
+                                    echo '</tbody>';
+                                    echo '</table>';
+                                    echo '</div><!--end col-->';
+                                    echo '</div><!--end row-->';
+                                    echo '</div>';
+                                    echo '</div><!--end teb pane-->';
+                                }
+                            ?>
                         </div><!--end tab content-->
                     </div><!--end col-->
                 </div><!--end row-->
@@ -438,7 +491,7 @@
                 <div class="row align-items-center">
                     <div class="col-sm-8">
                         <div class="text-sm-left">
-                            <p class="mb-0">© <?php echo date("Y"); ?> DepEd Manila</p>
+                            <p class="mb-0">© <script>document.write(new Date().getFullYear())</script> DepEd Manila</p>
                         </div>
                     </div><!--end col-->
 
@@ -501,7 +554,7 @@
 </style>
 
 <!-- script for fetchdata -->
-<script>
+<!-- <script>
 $(document).ready(function() {
     // Function to initialize DataTables
     function initializeDataTables() {
@@ -593,9 +646,9 @@ $(document).ready(function() {
         initializeDataTables();
     }, 600000); // 10000 milliseconds = 10 mins
 });
-</script>
+</script> -->
 <!-- script for facebook -->
-<script>
+<!-- <script>
     $(document).ready(function() {
         // Function to initialize DataTables
         function initializeDataTables() {
@@ -630,7 +683,4 @@ $(document).ready(function() {
             initializeDataTables();
         }, 600000); // 10000 milliseconds = 10 mins
     });
-</script>
-<!-- script for iframe -->
-<script>
-</script>
+</script> -->

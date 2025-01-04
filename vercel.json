@@ -7,13 +7,13 @@
   ],
   "redirects": [
     {
-      "source": "/sampol/404/",
-      "destination": "/sampol/404.php",
+      "source": "../404/",
+      "destination": "../404.html",
       "permanent": false
     },
     {
       "source": "/sampol/500/",
-      "destination": "/sampol/500.php",
+      "destination": "../500.html",
       "permanent": false
     }
   ],

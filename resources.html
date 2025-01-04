@@ -218,40 +218,40 @@
         <!-- Navbar End -->
         
         <!-- Resources Start -->
-<section class="section bg-light" id="resources">
-    <div class="container">
-        <!-- Breadcrumb Navigation -->
-        <nav aria-label="breadcrumb">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a class="text-custom" href="index.php">Home</a></li>
-                <li class="breadcrumb-item" aria-current="page">Resources</li>
-                <li class="breadcrumb-item active" aria-current="page">Downloadables and Materials</li>
-            </ol>
-        </nav>
+        <section class="section bg-light" id="home">
+            <div class="container">
+                <!-- Breadcrumb Navigation -->
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a class="text-custom" href="index.php">Home</a></li>
+                        <li class="breadcrumb-item" aria-current="page">Resources</li>
+                        <li class="breadcrumb-item active" aria-current="page">Downloadables and Materials</li>
+                    </ol>
+                </nav>
 
-        <!-- Section Title and Description -->
-        <div class="row justify-content-center">
-            <div class="col-12 text-center">
-                <div class="section-title">
-                    <h4 class="title text-uppercase mb-4">Resources</h4>
-                    <p class="text-danger mx-auto para-desc mb-0" style="font-style: italic;">*Use the tabs below to explore the available resources.*</p>
-                </div>
-            </div><!--end col-->
-        </div><!--end row-->
+                <!-- Section Title and Description -->
+                <div class="row justify-content-center">
+                    <div class="col-12 text-center">
+                        <div class="section-title">
+                            <h4 class="title text-uppercase mb-4">Resources</h4>
+                            <p class="text-danger mx-auto para-desc mb-0" style="font-style: italic;">*Use the tabs below to explore the available resources.*</p>
+                        </div>
+                    </div><!--end col-->
+                </div><!--end row-->
 
-        <!-- Tab Content Section -->
-        <div class="row mt-4">
-            <div class="col-12">
-                <!-- Tab navigation -->
-                <ul class="nav nav-pills nav-justified" id="pills-tab" role="tablist"></ul><!--end nav pills-->
+                <!-- Tab Content Section -->
+                <div class="row mt-4">
+                    <div class="col-12">
+                        <!-- Tab navigation -->
+                        <ul class="nav nav-pills nav-justified" id="pills-tab" role="tablist"></ul><!--end nav pills-->
 
-                <!-- Tab content -->
-                <div class="tab-content mt-3" id="pills-tabContent"></div><!--end tab content-->
-            </div><!--end col-->
-        </div><!--end row-->
-    </div><!--end container-->
-</section><!--end section-->
-<!-- Resources End -->
+                        <!-- Tab content -->
+                        <div class="tab-content mt-3" id="pills-tabContent"></div><!--end tab content-->
+                    </div><!--end col-->
+                </div><!--end row-->
+            </div><!--end container-->
+        </section><!--end section-->
+        <!-- Resources End -->
 
 
         <!-- Seals Start -->
@@ -385,110 +385,110 @@
     tr { height: 50px; }
 </style>
 <script>
-// Sample data for resources
-const resourcesData = {
-    "downloadables": {
-        title: "Downloadables",
-        icon: "mdi mdi-file",
-        files: [
-            {
-                date: "2025-01-01",
-                department: "Department A",
-                title: "Document 1",
-                link: "https://example.com/doc1"
-            },
-            {
-                date: "2025-01-02",
-                department: "Department B",
-                title: "Document 2",
-                link: "https://example.com/doc2"
-            }
-        ]
-    },
-    "materials": {
-        title: "Materials",
-        icon: "mdi mdi-file-alert",
-        files: [
-            {
-                date: "2025-01-03",
-                department: "Department C",
-                title: "Material 1",
-                link: "https://example.com/material1"
-            },
-            {
-                date: "2025-01-04",
-                department: "Department D",
-                title: "Material 2",
-                link: "https://example.com/material2"
-            }
-        ]
-    }
-};
+    // Sample data for resources
+    const resourcesData = {
+        "downloadables": {
+            title: "Downloadables",
+            icon: "mdi mdi-file",
+            files: [
+                {
+                    date: "2025-01-01",
+                    department: "Department A",
+                    title: "Document 1",
+                    link: "https://example.com/doc1"
+                },
+                {
+                    date: "2025-01-02",
+                    department: "Department B",
+                    title: "Document 2",
+                    link: "https://example.com/doc2"
+                }
+            ]
+        },
+        "materials": {
+            title: "Materials",
+            icon: "mdi mdi-file-alert",
+            files: [
+                {
+                    date: "2025-01-03",
+                    department: "Department C",
+                    title: "Material 1",
+                    link: "https://example.com/material1"
+                },
+                {
+                    date: "2025-01-04",
+                    department: "Department D",
+                    title: "Material 2",
+                    link: "https://example.com/material2"
+                }
+            ]
+        }
+    };
 
-// Populate tabs and tab content dynamically
-const pillsTab = document.getElementById("pills-tab");
-const pillsTabContent = document.getElementById("pills-tabContent");
+    // Populate tabs and tab content dynamically
+    const pillsTab = document.getElementById("pills-tab");
+    const pillsTabContent = document.getElementById("pills-tabContent");
 
-Object.keys(resourcesData).forEach((key, index) => {
-    const { title, icon, files } = resourcesData[key];
-    const isActive = index === 0 ? "active" : "";
-    const isShow = index === 0 ? "show active" : "";
+    Object.keys(resourcesData).forEach((key, index) => {
+        const { title, icon, files } = resourcesData[key];
+        const isActive = index === 0 ? "active" : "";
+        const isShow = index === 0 ? "show active" : "";
 
-    // Create tab navigation
-    const navItem = document.createElement("li");
-    navItem.className = "nav-item mb-4 pt-2";
-    navItem.innerHTML = `
-        <a class="nav-link ${isActive}" id="${key}-tab" data-toggle="pill" href="#${key}" role="tab" aria-controls="${key}" aria-selected="${isActive}">
-            <div class="capabilities text-center rounded pt-2 pb-2">
-                <div class="icon bg-custom mb-3">
-                    <i class="mdi ${icon} text-white"></i>
+        // Create tab navigation
+        const navItem = document.createElement("li");
+        navItem.className = "nav-item mb-4 pt-2";
+        navItem.innerHTML = `
+            <a class="nav-link ${isActive}" id="${key}-tab" data-toggle="pill" href="#${key}" role="tab" aria-controls="${key}" aria-selected="${isActive}">
+                <div class="capabilities text-center rounded pt-2 pb-2">
+                    <div class="icon bg-custom mb-3">
+                        <i class="mdi ${icon} text-white"></i>
+                    </div>
+                    <h4 class="title font-weight-normal mb-0">${title}</h4>
                 </div>
-                <h4 class="title font-weight-normal mb-0">${title}</h4>
+            </a>
+        `;
+        pillsTab.appendChild(navItem);
+
+        // Create tab content
+        const tabPane = document.createElement("div");
+        tabPane.className = `tab-pane fade ${isShow}`;
+        tabPane.id = key;
+        tabPane.setAttribute("role", "tabpanel");
+        tabPane.setAttribute("aria-labelledby", `${key}-tab`);
+
+        const filesTableRows = files
+            .map(
+                (file) => `
+                <tr>
+                    <td>${file.date}</td>
+                    <td>${file.department}</td>
+                    <td><a class="text-primary" href="${file.link}" target="_blank">${file.title}</a></td>
+                </tr>
+            `
+            )
+            .join("");
+
+        tabPane.innerHTML = `
+            <div class="capabilities-content border rounded p-4">
+                <div class="row align-items-center">
+                    <div class="col-md-12">
+                        <h4 class="title">${title}</h4>
+                        <table id="${key}-table" class="table table-striped" style="width:100%">
+                            <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Department</th>
+                                    <th>Title</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                ${filesTableRows || '<tr><td colspan="3" class="text-center">No data available</td></tr>'}
+                            </tbody>
+                        </table>
+                    </div><!--end col-->
+                </div><!--end row-->
             </div>
-        </a>
-    `;
-    pillsTab.appendChild(navItem);
-
-    // Create tab content
-    const tabPane = document.createElement("div");
-    tabPane.className = `tab-pane fade ${isShow}`;
-    tabPane.id = key;
-    tabPane.setAttribute("role", "tabpanel");
-    tabPane.setAttribute("aria-labelledby", `${key}-tab`);
-
-    const filesTableRows = files
-        .map(
-            (file) => `
-            <tr>
-                <td>${file.date}</td>
-                <td>${file.department}</td>
-                <td><a class="text-primary" href="${file.link}" target="_blank">${file.title}</a></td>
-            </tr>
-        `
-        )
-        .join("");
-
-    tabPane.innerHTML = `
-        <div class="capabilities-content border rounded p-4">
-            <div class="row align-items-center">
-                <div class="col-md-12">
-                    <h4 class="title">${title}</h4>
-                    <table id="${key}-table" class="table table-striped" style="width:100%">
-                        <thead>
-                            <tr>
-                                <th>Date</th>
-                                <th>Department</th>
-                                <th>Title</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            ${filesTableRows || '<tr><td colspan="3" class="text-center">No data available</td></tr>'}
-                        </tbody>
-                    </table>
-                </div><!--end col-->
-            </div><!--end row-->
-        </div>
-    `;
-    pillsTabContent.appendChild(tabPane);
-});
+        `;
+        pillsTabContent.appendChild(tabPane);
+    });
 </script>

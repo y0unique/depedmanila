@@ -2,28 +2,30 @@
 include "../../database/connection.php";
 
 $output= array();
-$sql = "SELECT * FROM usersvw";
+$sql = "SELECT * FROM userstbl";
 
 $totalQuery = mysqli_query($con,$sql);
 $total_all_rows = mysqli_num_rows($totalQuery);
 
 //Data Table
 $columns = array(
-	0 => 'id',
-	1 => 'username',
-	2 => 'email',
-	3 => 'type',
-	4 => 'status'
+	0 => 'user_id',
+	1 => 'user_username',
+	2 => 'user_email',
+	3 => 'user_type',
+	4 => 'user_department',
+	5 => 'user_profile',
+	6 => 'user_status'
 );
 
 //Search
 if(isset($_POST['search']['value']))
 {
 	$search_value = $_POST['search']['value'];
-	$sql .= " WHERE username like '%".$search_value."%'";
-	$sql .= " OR email like '%".$search_value."%'";
-	$sql .= " OR type like '%".$search_value."%'";
-	$sql .= " OR status like '%".$search_value."%'";
+	$sql .= " WHERE user_username like '%".$search_value."%'";
+	$sql .= " OR user_email like '%".$search_value."%'";
+	$sql .= " OR user_type like '%".$search_value."%'";
+	$sql .= " OR user_status like '%".$search_value."%'";
 }
 
 //Order
@@ -35,7 +37,7 @@ if(isset($_POST['order']))
 }
 else
 {
-	$sql .= " ORDER BY id asc";
+	$sql .= " ORDER BY user_status asc, user_id asc";
     
 }
 
@@ -53,13 +55,15 @@ $data = array();
 while($row = mysqli_fetch_assoc($query))
 {
 	$sub_array = array();
-	$sub_array[] = '<a href="javascript:void();" data-id="'.$row['id'].'" class="btn btn-info btn-sm edituserbtn" ><i class="fas fa-edit"></i></a>  
-					<a href="javascript:void();" data-id="'.$row['id'].'" class="btn btn-danger btn-sm deleteBtn_issuances" ><i class="fas fa-trash"></i></a>';
-	$sub_array[] = $row['id'];
-	$sub_array[] = $row['username'];
-	$sub_array[] = $row['email'];
-	$sub_array[] = $row['type'];
-	$sub_array[] = $row['status'];
+	$sub_array[] = '<a href="javascript:void();" data-id="'.$row['user_id'].'" class="btn btn-info btn-sm edituserbtn" ><i class="fas fa-edit"></i></a>  
+					<a href="javascript:void();" data-id="'.$row['user_id'].'" class="btn btn-danger btn-sm deleteuserBtn" ><i class="fas fa-trash"></i></a>';
+	$sub_array[] = $row['user_id'];
+	$sub_array[] = $row['user_username'];
+	$sub_array[] = $row['user_email'];
+	$sub_array[] = $row['user_type'];
+	$sub_array[] = $row['user_department'];
+	$sub_array[] = $row['user_profile'];
+	$sub_array[] = $row['user_status'];
     
 	$data[] = $sub_array;
 }

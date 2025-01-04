@@ -45,15 +45,14 @@
 
                     <!-- Content Row -->
                     <div class="row">
-
                         <!-- Total Users -->
-                        <div class="col-xl-3 col-md-6 mb-4">
+                        <div class="col-xl col-md-6 mb-4">
                             <div class="card border-left-primary shadow h-100 py-2">
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
                                             <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                                                Total Users
+                                                <a href="users" class="text-primary">Total Users</a>
                                             </div>
                                             <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo strtoupper($total_users);?></div>
                                         </div>
@@ -66,18 +65,18 @@
                         </div>
 
                         <!-- Total Downloadable Files -->
-                        <div class="col-xl-3 col-md-6 mb-4">
+                        <div class="col-xl col-md-6 mb-4">
                             <div class="card border-left-success shadow h-100 py-2">
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
                                             <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
-                                                Total Downloadable Files
+                                                <a href="files" class="text-success">Total Downloadable Files</a>
                                             </div>
                                             <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo strtoupper($total_downloadable);?></div>
                                         </div>
                                         <div class="col-auto">
-                                            <i class="fas fa-solid fa-file fa-2x text-gray-300"></i>
+                                            <i class="fas fa-file-archive fa-2x text-gray-300"></i>
                                         </div>
                                     </div>
                                 </div>
@@ -85,18 +84,18 @@
                         </div>
 
                         <!-- Total Transparency Files -->
-                        <div class="col-xl-3 col-md-6 mb-4">
+                        <div class="col-xl col-md-6 mb-4">
                             <div class="card border-left-info shadow h-100 py-2">
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
                                             <div class="text-xs font-weight-bold text-info text-uppercase mb-1">
-                                                Total Transparency Files
+                                                <a href="bac" class="text-info">Total Transparency Files</a>
                                             </div>
                                             <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo strtoupper($total_transparency);?></div>
                                         </div>
                                         <div class="col-auto">
-                                        <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
+                                        <i class="fas fa-file-pdf fa-2x text-gray-300"></i>
                                         </div>
                                     </div>
                                 </div>
@@ -104,18 +103,37 @@
                         </div>
 
                         <!-- Total Issuances -->
-                        <div class="col-xl-3 col-md-6 mb-4">
+                        <div class="col-xl col-md-6 mb-4">
                             <div class="card border-left-warning shadow h-100 py-2">
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
                                             <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
-                                                Total Issuances
+                                                <a href="issuances" class="text-warning">Total Issuances</a>
                                             </div>
                                             <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo strtoupper($total_issuances);?></div>
                                         </div>
                                         <div class="col-auto">
-                                            <i class="fas fa-sticky-note fa-2x text-gray-300"></i>
+                                            <i class="fas fa-file-alt fa-2x text-gray-300"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Total Schools -->
+                        <div class="col-xl col-md-6 mb-4">
+                            <div class="card border-left-danger shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-danger text-uppercase mb-1">
+                                                <a href="schools" class="text-danger">Total Issuances</a>
+                                            </div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo strtoupper($total_schools);?></div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="fas fa-school fa-2x text-gray-300"></i>
                                         </div>
                                     </div>
                                 </div>
@@ -126,7 +144,7 @@
                     <!-- Content Row -->
                     <div class="row">
 
-                        <div class="col-xl-8 col-lg-7">
+                        <div class="col-xl-8 col-lg-6">
 
                             <!-- Area Chart -->
                             <div class="card shadow mb-4">
@@ -155,11 +173,11 @@
                         </div>
 
                         <!-- Donut Chart -->
-                        <div class="col-xl-4 col-lg-7">
+                        <div class="col-xl-4 col-lg-6">
                             <div class="card shadow mb-4">
                                 <!-- Card Header - Dropdown -->
                                 <div class="card-header py-3">
-                                    <h6 class="m-0 font-weight-bold text-primary">Donut Chart</h6>
+                                    <h6 class="m-0 font-weight-bold text-primary">Issuances Chart</h6>
                                 </div>
                                 <!-- Card Body -->
                                 <div class="card-body">
@@ -167,15 +185,7 @@
                                         <canvas id="myPieChart"></canvas>
                                     </div>
                                     <div class="mt-4 text-center small">
-                                        <span class="mr-2">
-                                            <i class="fas fa-circle text-primary"></i> Direct
-                                        </span>
-                                        <span class="mr-2">
-                                            <i class="fas fa-circle text-success"></i> Social
-                                        </span>
-                                        <span class="mr-2">
-                                            <i class="fas fa-circle text-info"></i> Referral
-                                        </span>
+                                        <div id="pie-chart-legend" class="mt-4 text-center small"></div>
                                     </div>
                                 </div>
                             </div>
@@ -200,7 +210,12 @@
 
     <!-- scripts -->
     <?php include 'includes/scripts.php'; ?>
+    
+    <script src="vendor/chart.js/Chart.min.js"></script>
 
+    <script src="js/demo/chart-pie-demo.js"></script>
+    <!-- <script src="js/demo/chart-area-demo.js"></script> -->
+    <!-- <script src="js/demo/chart-bar-demo.js"></script> -->
 </body>
 
 </html>

@@ -1,6 +1,7 @@
 <?php
     include 'database/connection.php';
     include 'database/code.php';
+    include 'headers/permission_policy_config.php';
 
 ?>
 <meta charset="utf-8">
@@ -21,12 +22,19 @@
 
 <!-- Custom styles for this page -->
 <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+<link href="vendor/datatables/datatables-simple-demo.js" rel="stylesheet">
 
 <!-- favicon -->
-<link rel="shortcut icon" href="images/logo/favicon.ico">
+<link rel="shortcut icon" href="images/logo/DepEd_logo.png">
 
+<!-- Link for DataTable -->
+<!-- <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.5/css/jquery.dataTables.css">
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.13.5/js/jquery.dataTables.js"></script> -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> -->
 <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css"/>
+
 
 <script>
 </script>

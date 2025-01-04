@@ -22,7 +22,12 @@
 
         <!-- Sidebar -->
         <?php include 'includes/sidebar.php';
-        echo '<script>document.getElementById("issuances").classList.add("active");</script>';?>
+        echo '  <script>
+                    document.getElementById("issuances").classList.add("active");
+                    document.getElementById("collapseIssuances").classList.add("show");
+                    document.getElementById("aIssuances").classList.add("active");
+                    document.getElementById("acollapseIssuances").classList.remove("collapsed");
+                </script>';?>
         <!-- End of Sidebar -->
 
         <!-- Content Wrapper -->
@@ -54,7 +59,7 @@
 
                         <div class="card-body">
                             <div class="table-responsive">
-                                <table class="table table-striped display compact text-gray-900 " id="issuancesTable" width="100%" cellspacing="0">
+                                <table class="table table-striped display compact text-gray-900 " id="issuancesTable" width="100%" cellspacing="0" table-layout="auto">
                                     <thead>
                                         <tr>
                                             <th>Action</th>
@@ -64,6 +69,7 @@
                                             <th>Memo Type</th>
                                             <th>Memo Date</th>
                                             <th>Title</th>
+                                            <th>Status</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -98,24 +104,24 @@
 </html>
 <script type="text/javascript">
     $(document).ready(function() {
-      $('#issuancesTable').DataTable({
-        "fnCreatedRow": function( nRow, aData, iDataIndex ) {
-          $(nRow).attr('id', aData[0]);
-        },
-        'serverSide':'true',
-        'processing':'true',
-        'paging':'true',
-        'order':[],
-        'ajax': {
-          'url':'includes/fetchdata/issuancesfetch.php',
-          'type':'post',
-        },
-        "columnDefs": [{
-          'target':[0,5],
-          'orderable' :false
-        }]
-      });
-    } );
+        $('#issuancesTable').DataTable({
+            "fnCreatedRow": function( nRow, aData, iDataIndex ) {
+                $(nRow).attr('issuances_id', aData[0]);
+            },
+            'serverSide':'true',
+            'processing':'true',
+            'paging':'true',
+            'order':[],
+            'ajax': {
+                'url':'includes/fetchdata/issuancesfetch.php',
+                'type':'post',
+            },
+            "columnDefs": [{
+                'target':[0,6],
+                'orderable' :false
+            }]
+        });
+    });
 
     //add issuances
     $(document).on('submit','#addIssuances',function(e){
@@ -135,33 +141,32 @@
                 type:"post",
                 data:
                 {
-                webID:webID,
-                webUsername:webUsername,
-                tracking_number:tracking_number,
-                issuances_type:issuances_type,
-                issuances_title:issuances_title,
-                issuances_link:issuances_link,
-                issuances_number:issuances_number,
-                issuances_date:issuances_date,
-                add: true
-            },
+                    webID:webID,
+                    webUsername:webUsername,
+                    tracking_number:tracking_number,
+                    issuances_type:issuances_type,
+                    issuances_title:issuances_title,
+                    issuances_link:issuances_link,
+                    issuances_number:issuances_number,
+                    issuances_date:issuances_date,
+                    add: true
+                },
                 success:function(data){
                     var json = JSON.parse(data);
                     var addIssuanceStatus = json.addIssuanceStatus;
-                if(addIssuanceStatus =='true'){
-                    mytable =$('#issuancesTable').DataTable();
-                    mytable.draw();
-                    $('#addIssuancesModal').modal('hide');
-                    $('#addIssuances')[0].reset();
-                    alertify.set('notifier','position', 'top-right');
-                    alertify.success(json.message);
-                }else{
-                    alert('failed');
+                    if(addIssuanceStatus =='true'){
+                        mytable =$('#issuancesTable').DataTable();
+                        mytable.draw();
+                        $('#addIssuancesModal').modal('hide');
+                        $('#addIssuances')[0].reset();
+                        alertify.set('notifier','position', 'top-right');
+                        alertify.success(json.message);
+                    }else{
+                        alert('failed');
+                    }
                 }
-            }
             });
-            }
-            else {
+        } else {
             alert('Fill all the required fields');
         }
     });
@@ -170,6 +175,7 @@
     $('#issuancesTable').on('click', '.editissuancebtn ', function(event) {
         var table = $('#issuancesTable').DataTable();
         var id = $(this).data('id');
+        var trid = $(this).closest('tr').attr('issuances_id');
         $('#editIssuancesModal').modal('show');
 
         $.ajax({
@@ -183,12 +189,25 @@
             var json = JSON.parse(data);
 
             $('#_tracking_number').val(json.tracking_number);
-            $('#_issuances_type').val(json.type);
-            $('#_issuances_title').val(json.title);
-            $('#_issuances_link').val(json.link);
-            $('#_issuances_number').val(json.number);
-            $('#_issuances_date').val(json.date);
+            $('#_issuances_title').val(json.issuances_title);
+            $('#_issuances_link').val(json.issuances_link);
+            $('#_issuances_number').val(json.issuances_number);
+            $('#_issuances_date').val(json.issuances_date);
+            $('#_issuances_type').val(json.issuances_type);
+            $('#_issuances_status').val(json.issuances_status).change();
+
+            // Check if issuances_status is "active"
+            if ($('#_issuances_status').val() == 'active') {
+                // Show the issuance status container
+                $('#issuanceStatusContainer').attr('hidden', 'hidden');
+            } else {
+                // Hide the issuance status container
+                $('#issuanceStatusContainer').removeAttr('hidden');
+            }
+
+
             $('#_id').val(id);
+            $('#_trid').val(trid);
         }
         })
     });
@@ -199,46 +218,164 @@
         var webID = $('#webID').val();
         var webUsername = $('#webUsername').val();
         var tracking_number = $('#_tracking_number').val();
-        var issuances_type= $('#_issuances_type').val();
         var issuances_title= $('#_issuances_title').val();
         var issuances_link= $('#_issuances_link').val();
         var issuances_number= $('#_issuances_number').val();
         var issuances_date= $('#_issuances_date').val();
+        var issuances_type= $('#_issuances_type').val();
+        var issuances_status= $('#_issuances_status').val();
         var id = $('#_id').val();
-        if (tracking_number != '' && issuances_type != '' && issuances_title != '' && issuances_link != '' && issuances_number != '' && issuances_date != '') {
+        var trid = $('#_trid').val();
+        if (tracking_number != '' && issuances_title != '' && issuances_link != '' && issuances_number != '' && issuances_date != '' && issuances_type != '' && issuances_status != '') {
         $.ajax({
             url: "includes/codes/issuancescode.php",
             type: "post",
             data: {
-            webID:webID,
-            id:id,
-            webUsername:webUsername,
-            tracking_number:tracking_number,
-            issuances_type:issuances_type,
-            issuances_title:issuances_title,
-            issuances_link:issuances_link,
-            issuances_number:issuances_number,
-            issuances_date:issuances_date,
-            update: true
+                id:id,
+                webID:webID,
+                webUsername:webUsername,
+                tracking_number:tracking_number,
+                issuances_title:issuances_title,
+                issuances_link:issuances_link,
+                issuances_number:issuances_number,
+                issuances_date:issuances_date,
+                issuances_type:issuances_type,
+                issuances_status:issuances_status,
+                update: true
             },
             success: function(data) {
-            var json = JSON.parse(data);
-            var editIssuanceStatus = json.editIssuanceStatus;
-            if (editIssuanceStatus == 'true') {
-                table = $('#issuancesTable').DataTable();
-                var button = '<td><a href="javascript:void();" data-id="' + id + '" class="btn btn-info btn-sm editissuancebtn">Edit</a>  <a href="#!"  data-id="' + id + '"  class="btn btn-danger btn-sm deleteBtn">Delete</a></td>';
-                var row = table.row("[id='" + trid + "']");
-                row.row("[id='" + trid + "']").data([id, tracking_number, issuances_type, issuances_title, issuances_link, issuances_number, issuances_date, button]);
-                alertify.set('notifier','position', 'top-right');
-                alertify.success(json.message);
-                $('#editIssuancesModal').modal('hide');
-            } else {
-                alert('failed');
-            }
+                var json = JSON.parse(data);
+                var editIssuanceStatus = json.editIssuanceStatus;
+                if (editIssuanceStatus == 'true') {
+                    $('#issuancesTable').DataTable().destroy();
+                    mytable = $('#issuancesTable').DataTable({
+                        "fnCreatedRow": function(nRow, aData, iDataIndex) {
+                            $(nRow).attr('id', aData[0]);
+                        },
+                        'serverSide': 'true',
+                        'processing': 'true',
+                        'paging': 'true',
+                        'order': [],
+                        'ajax': {
+                            'url': 'includes/fetchdata/issuancesfetch.php',
+                            'type': 'post',
+                        },
+                        "columnDefs": [{
+                            'target': [0, 6],
+                            'orderable': false
+                        }]
+                    });
+                    alertify.set('notifier','position', 'top-right');
+                    alertify.success(json.message);
+                    $('#editIssuancesModal').modal('hide');
+                } else if(editIssuanceStatus == 'false'){
+                    alertify.set('notifier','position', 'top-right');
+            	    alertify.error(json.message);
+                }else{
+                    alert('Error communicating with the database');
+                }
             }
         });
         } else {
-        alert('Fill all the required fields');
+            alert('Fill all the required fields');
         }
+    });
+
+    //view issuance for delete modal
+    $('#issuancesTable').on('click', '.deleteissuancebtn ', function(event) {
+        var table = $('#issuancesTable').DataTable();
+        var id = $(this).data('id');
+        var trid = $(this).closest('tr').attr('issuances_id');
+        $('#deleteIssuancesModal').modal('show');
+
+        $.ajax({
+        url: "includes/codes/issuancescode.php",
+        data: {
+            id: id,
+            deleteview: true
+        },
+        type: 'post',
+        success: function(data) {
+            var json = JSON.parse(data);
+
+            $('#_tracking_number_').val(json.tracking_number);
+            $('#_issuances_title_').val(json.issuances_title);
+            $('#_status_').val(json.tracking_status);
+            $('#_id_').val(id);
+            $('#_trid_').val(trid);
+        }
+        })
+    });
+
+    //delete issuances
+    $(document).on('submit', '#deleteIssuances', function(e) {
+        e.preventDefault();
+        var webID = $('#webID').val();
+        var webUsername = $('#webUsername').val();
+        var tracking_number = $('#_tracking_number_').val();
+        var issuances_title = $('#_issuances_title_').val();
+        var status= $('#_status_').val();
+        var id = $('#_id_').val();
+        var trid = $('#_trid_').val();
+        if (tracking_number != '' && issuances_title != '') {
+        $.ajax({
+            url: "includes/codes/issuancescode.php",
+            type: "post",
+            data: {
+                id:id,
+                webID:webID,
+                webUsername:webUsername,
+                tracking_number:tracking_number,
+                issuances_title:issuances_title,
+                status:status,
+                delete: true
+            },
+            success: function(data) {
+                var json = JSON.parse(data);
+                var deleteIssuanceStatus = json.deleteIssuanceStatus;
+                if (deleteIssuanceStatus == 'true') {
+                    $('#issuancesTable').DataTable().destroy();
+                    mytable = $('#issuancesTable').DataTable({
+                        "fnCreatedRow": function(nRow, aData, iDataIndex) {
+                            $(nRow).attr('id', aData[0]);
+                        },
+                        'serverSide': 'true',
+                        'processing': 'true',
+                        'paging': 'true',
+                        'order': [],
+                        'ajax': {
+                            'url': 'includes/fetchdata/issuancesfetch.php',
+                            'type': 'post',
+                        },
+                        "columnDefs": [{
+                            'target': [0, 6],
+                            'orderable': false
+                        }]
+                    });
+                    alertify.set('notifier','position', 'top-right');
+                    alertify.defaults.notifier.classes = 'custom-notifier';
+                    alertify.success(json.message);
+                    $('#deleteIssuancesModal').modal('hide');
+                } else {
+                    alert('Error communicating with the database');
+                }
+            }
+        });
+        } else {
+            alert('Fill all the required fields');
+        }
+    });
+
+    //clear modal add
+    $('#addIssuancesModal').on('hidden.bs.modal', function() {
+        $('#addIssuances')[0].reset();
+    });
+    //clear modal edit
+    $('#editIssuancesModal').on('hidden.bs.modal', function() {
+        $('#editIssuances')[0].reset();
+    });
+    //clear modal delete
+    $('#deleteIssuancesModal').on('hidden.bs.modal', function() {
+        $('#deleteIssuances')[0].reset();
     });
 </script>

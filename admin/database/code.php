@@ -28,8 +28,10 @@
     $sql1 = mysqli_query($con, $sql);
     $row = mysqli_num_rows($sql1);
     $total_issuances = $row;
-    
-    
 
-
+    //total schools in schoolsvw
+    $sql = "SELECT * FROM schoolsvw WHERE status = 'active'";
+    $sql1 = mysqli_query($con, $sql);
+    $row = mysqli_num_rows($sql1);
+    $total_schools = $row;
 ?>

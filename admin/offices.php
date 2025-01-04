@@ -23,10 +23,7 @@
         <!-- Sidebar -->
         <?php include 'includes/sidebar.php';
         echo '<script>
-                document.getElementById("directories").classList.add("active");
-                document.getElementById("aOffices").classList.add("active");
-                document.getElementById("collapseDirectories").classList.add("show");
-                document.getElementById("acollapseDirectories").classList.remove("collapsed");
+                document.getElementById("offices").classList.add("active");
               </script>';?>
         <!-- End of Sidebar -->
 

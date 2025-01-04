@@ -6,11 +6,10 @@
         <div class="sidebar-brand-icon">
             <!-- <img src="images/logo/DepEd_logo.png"
                 style="height: 50px; width:50px; margin-right:5px;"> -->
-            <i class="fas fa-virus text-danger"></i>
+            <i class="fab fa-d-and-d text-danger"></i>
         </div>
         <div class="sidebar-brand-text mx-3">Deped Manila</div>
     </a>
-
     <!-- Divider -->
     <hr class="sidebar-divider my-0">
 
@@ -23,12 +22,27 @@
 
     <!-- Divider -->
     <hr class="sidebar-divider">
+    <!-- Heading -->
+    <div class="sidebar-heading">
+        Issuances
+    </div>
 
     <li class="nav-item" id="issuances">
-        <a class="nav-link" href="issuances">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseIssuances" aria-expanded="true" aria-controls="collapseIssuances" id="acollapseIssuances">
             <i class="fas fa-file-alt"></i>
-            <span>Issuances</span></a>
+            <span>Issuances</span>
+        </a>
+        <div id="collapseIssuances" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <h6 class="collapse-header">Issuances:</h6>
+                <a class="collapse-item" id="aIssuances" href="issuances">Issuances Posting</a>
+                <a class="collapse-item" id="aIssuancesCatergories" href="issuancescatergory">Issuances Categories</a>
+            </div>
+        </div>
     </li>
+
+    <?php
+        if($_SESSION['webType']== "superadmin" || $_SESSION['webType']== "admin"){?>
 
     <!-- Divider -->
     <hr class="sidebar-divider">
@@ -38,40 +52,20 @@
         Directories
     </div>
 
+
     <!-- Nav Item - Division of City Schools Menu -->
-    <li class="nav-item" id="directories">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseDirectories" aria-expanded="true" aria-controls="collapseDirectories" id="acollapseDirectories">
+    <li class="nav-item" id="offices">
+        <a class="nav-link" href="offices">
             <i class="fas fa-building"></i>
             <span>Division of City Schools</span>
         </a>
-        <div id="collapseDirectories" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-            <div class="bg-white py-2 collapse-inner rounded">
-                <h6 class="collapse-header">Division of City Schools:</h6>
-                <a class="collapse-item" id="aOffices" href="offices">Offices</a>
-                <a class="collapse-item" id="aOSDS" href="osds">OSDS</a>
-                <a class="collapse-item" id="aCID" href="cid">CID</a>
-                <a class="collapse-item" id="aSGOD" href="sgod">SGOD</a>
-            </div>
-        </div>
     </li>
 
     <!-- Nav Item - Schools Menu -->
     <li class="nav-item" id="schools">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseSchools" aria-expanded="true" aria-controls="collapseSchools" id="acollapseSchools">
-            <i class="fas fa-school"></i>
-            <span>Schools</span>
-        </a>
-        <div id="collapseSchools" class="collapse" aria-labelledby="headingUtilities"
-            data-parent="#accordionSidebar">
-            <div class="bg-white py-2 collapse-inner rounded">
-                <h6 class="collapse-header">Schools:</h6>
-                <a class="collapse-item" id="aschools" href="schools">All Schools</a>
-                <a class="collapse-item" id="aelementary" href="elementary">Elementary Schools</a>
-                <a class="collapse-item" id="ajhschool" href="jhschool">Junior High School</a>
-                <a class="collapse-item" id="ashschool" href="shschool">Senior High School</a>
-                <a class="collapse-item" id="aspedschool" href="spedschool">Special Education</a>
-            </div>
-        </div>
+    <a class="nav-link" href="schools">
+        <i class="fas fa-school"></i>
+        <span>Schools</span></a>
     </li>
 
     <!-- Divider -->
@@ -100,23 +94,43 @@
 
     <!-- Nav Item - Files Menu -->
     <li class="nav-item" id="files">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseFiles" aria-expanded="true" aria-controls="collapseFiles" id="acollapseFiles">
-            <i class="fas fa-file-archive"></i>
-            <span>Files</span>
+    <a class="nav-link" href="files">
+        <i class="fas fa-file-archive"></i>
+        <span>Files</span></a>
+    </li>
+    <!-- Divider -->
+    <hr class="sidebar-divider">
+
+    <!-- Heading -->
+    <div class="sidebar-heading">
+        BAC FILES
+    </div>
+    <!-- Nav Item - BAC Menu -->
+    <li class="nav-item" id="bac">
+    <a class="nav-link" href="bac">
+        <i class="fas fa-file-archive"></i>
+        <span>BAC</span></a>
+    </li>
+    <!-- Nav Item - BAC Menu -->
+    <li class="nav-item" id="files">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseBac" aria-expanded="true" aria-controls="collapseBac" id="acollapseBac">
+            <i class="fas fa-file-pdf"></i>
+            <span>BAC Files</span>
         </a>
-        <div id="collapseFiles" class="collapse" aria-labelledby="headingUtilities"
+        <div id="collapseBac" class="collapse" aria-labelledby="headingUtilities"
             data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
-                <h6 class="collapse-header">Files:</h6>
-                <a class="collapse-item" id="afiles" href="files">All Files</a>
-                <a class="collapse-item" id="adownloadables" href="downloadables">Downloadables</a>
-                <a class="collapse-item" id="atransparencies" href="transparencies">Transparencies</a>
+                <h6 class="collapse-header">BAC Files:</h6>
+                <a class="collapse-item" id="aBacfiles" href="bac">All Bac Files</a>
+                <a class="collapse-item" id="ainvitationtobid" href="#">Invitation To Bid</a>
+                <a class="collapse-item" id="aprocurements" href="#">Procurement</a>
+                <a class="collapse-item" id="atransparencies" href="#">Transparencies</a>
+                <a class="collapse-item" id="atransparencies" href="#">Invitation To Bid</a>
             </div>
         </div>
     </li>
 
-    <?php
-        if($_SESSION['webType']== "superadmin"){?>
+    
     <!-- Divider -->
     <hr class="sidebar-divider">
 

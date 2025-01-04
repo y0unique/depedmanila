@@ -31,18 +31,25 @@
                                     <div class="text-center">
                                         <h1 class="login-title">DepEd Manila</h1>
                                     </div>
-                                    <?php if (isset($_GET['error'])) { ?>
-                                        <p class="text-danger"><?php echo $_GET['error']; ?></p>
-                                    <?php }?>
-                                    <form class="user" action="database/login_inc.php" method="post">
-                                        <div class="form-group">
-                                            <input type="text" class="form-control form-control-user" name="webusername" id="webusername" placeholder="Username" required>
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="password" class="form-control form-control-user" name="webpassword" id="webpassword" placeholder="Password" autocomplete="off" required>
-                                        </div>
+                                    <div id="error-message" class="error-message text-danger"></div>
 
-                                        <!-- <input class="btn btn-primary btn-user btn-block" type="submit" id="btnSubmit" value="Login"> -->
+                                    <form class="user" id="login-form">
+                                        <div class="row">
+                                            <div class="col-12 form-group">
+                                                <input type="text" class="form-control form-control-user" name="webusername" id="webusername" placeholder="Username">
+                                            </div>
+
+                                            <div class="col-12 form-group">
+                                                <div class="input-group mb-3">
+                                                    <input type="password" class="form-control form-control-user" name="webpassword" id="webpassword" placeholder="Password" autocomplete="off">
+                                                    <div class="input-group-append">
+                                                        <button type="button" id="show_password" class="btn btn-outline-secondary btn-user btn-block">
+                                                            <i class="fa fa-eye"></i>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                         <button type="submit" id="submit" name="loginButton" class="btn btn-primary btn-user btn-block">
                                             Login
                                         </button>
@@ -73,7 +80,27 @@
 </body>
 
 </html>
+<script>
+    $(document).ready(function() {
+        $('#show_password').click(function() {
+            var passwordField = $('#webpassword');
+            var fieldType = passwordField.attr('type');
+            
+            // Toggle password visibility
+            if (fieldType === 'password') {
+                passwordField.attr('type', 'text');
+                $(this).html('<i class="fa fa-eye-slash"></i>');
+            } else {
+                passwordField.attr('type', 'password');
+                $(this).html('<i class="fa fa-eye"></i>');
+            }
+        });
+    });
+</script>
+
 <script src="vendor/jquery/jquery.min.js"></script>
 <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 <script src="js/sb-admin-2.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script src="js/script.js"></script>

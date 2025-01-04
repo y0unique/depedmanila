@@ -1,105 +1,115 @@
 <!-- Add Files Modal -->
 <div class="modal fade" id="addFilesModal" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-scrollable">
+    <div class="modal-dialog">
         <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title text-gray-900" id="staticBackdropLabel">Add Files</h5>
+            <div class="modal-header bg-gradient-primary">
+                <h5 class="modal-title text-gray-100" id="staticBackdropLabel">Add Files</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
 
-            <div class="modal-body">
-                <form action="addFiles">
-
+            <div class="modal-body text-gray-900">
+                <form id="addFiles" action="">
+                    <!-- File Type -->
                     <div class="mb-3 row">
-                        <label for="addFilesField" class="col-md-2 form-label">File Type:</label>
-                        <div class="col-md-10">
+                        <label for="addFileField" class="col-md-3 form-label">File Type:</label>
+                        <div class="col-md-9">
                             <select class="form-control" id="file_type" name="file_type" required>
-                                <option disabled selected hidden></option>
-                                <option value="downloadable"> Downloadables </option>
-                                <option value="transparency"> Transparencies </option>
+                                <option disabled selected hidden> <-- SELECT --> </option>
+                                <option value="DOWNLOADABLES"> Downloadables </option>
+                                <option value="MATERIALS"> Materials </option>
                              </select>
                         </div>
                     </div>
+                    <!-- For Materials: Department -->
+                    <div class="mb-3 row" id="department_div" hidden>
+                        <label for="addFileField" class="col-md-3 form-label">Department:</label>
+                        <div class="col-md-9">
+                            <select class="form-control" id="file_department" name="file_department" disabled>
+                                <option disabled selected hidden> <-- SELECT --> </option>
+                                <option value="ADMIN"> Admin </option>
+                                <option value="ASDS"> ASDS </option>
+                                <option value="ACCOUNTING"> Accounting </option>
+                                <option value="CID"> CID </option>
+                                <option value="BUDGET"> Budget </option>
+                                <option value="ICT"> ICT </option>
+                                <option value="OSDS"> OSDS </option>
+                                <option value="RECORDS"> Records </option>
+                                <option value="SGOD"> SGOD </option>
+                                <option value="LEGAL"> Legal </option>
+                                <option value="HRMS"> HRMS </option>
+                                <option value="DRRMO"> DRRMO </option>
+                                <option value="COA"> COA </option>
+                                <option value="PROPERTY"> Property </option>
+                                <option value="HEALTH"> Health </option>
+                                <option value="PUBLICATION"> Publication </option>
+                                <option value="SCHOOL PLANT"> School Plant </option>
 
+                            </select>
+                        </div>
+                    </div>
+                    <!-- File Title -->
                     <div class="mb-3 row">
-                        <label for="addFilesField" class="col-md-2 form-label">Title:</label>
-                        <div class="col-md-10">
-                            <textarea class="form-control" type="text" id="file_title" name="file_title" rows="2"></textarea>
+                        <label for="addFileField" class="col-md-3 form-label">Title:</label>
+                        <div class="col-md-9">
+                            <textarea class="form-control" type="text" id="file_title" name="file_title" rows="3" required></textarea>
+                        </div>
+                    </div>
+                    <!-- File Link -->
+                    <div class="mb-3 row">
+                        <label for="addFileField" class="col-md-3 form-label">Link:</label>
+                        <div class="col-md-9">
+                            <textarea class="form-control" type="text" id="file_link" name="file_link" rows="3" required></textarea>
                         </div>
                     </div>
 
-                    <div class="mb-3 row">
-                        <label for="addFilesField" class="col-md-2 form-label">Link:</label>
-                        <div class="col-md-10">
-                            <textarea class="form-control" type="text" id="file_link" name="file_link" rows="2"></textarea>
-                        </div>
+                    <input class="form-control" type="hidden" id="webID" value="<?php echo $_SESSION['webID'] ?>">
+                    <input class="form-control" type="hidden" id="webUsername" value="<?php echo $_SESSION['webUsername'] ?>">
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="submit" id="submit" class="btn btn-primary">Submit</button>
                     </div>
-
-                    <div class="mb-3 row">
-                        <label for="addFilesField" class="col-md-2 form-label">Publish Date:</label>
-                        <div class="col-md-4">
-                            <input class="form-control" type="date" id="file_publishDate" name="file_publishDate">
-                        </div>
-                        <label for="addFilesField" class="col-md-2 form-label">Closing Date:</label>
-                        <div class="col-md-4">
-                            <input class="form-control" type="date" id="file_closingDate" name="file_closingDate">
-                        </div>
-                    </div>
-
-                    <div class="mb-3 row">
-                        <label for="addFilesField" class="col-md-2 form-label">Awarded To:</label>
-                        <div class="col-md-10">
-                            <input class="form-control" type="text" id="awarded_to" name="awarded_to">
-                        </div>
-                    </div>
-
-                    <div class="mb-3 row">
-                        <label for="addFilesField" class="col-md-2 form-label">Reference Number:</label>
-                        <div class="col-md-10">
-                            <input class="form-control" type="text" id="reference_number" name="reference_number">
-                        </div>
-                    </div>
-
-                    <div class="mb-3 row">
-                        <label for="addFilesField" class="col-md-2 form-label">Procurement Mode:</label>
-                        <div class="col-md-10">
-                            <input class="form-control" type="text" id="procurement_mode" name="procurement_mode">
-                        </div>
-                    </div>
-
-                    <input class="form-control" type="hidden" id="" value="<?php echo "id"//echo $_SESSION[''] ?>">
-                    <input class="form-control" type="hidden" id="" value="<?php echo "id"//echo $_SESSION[''] ?>">
+                    
                 </form>
-            </div>
-
-            <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Submit</button>
             </div>
         </div>
     </div>
 </div>
 
 <script>
-    //disable file_publishDate, file_closingDate, awarded_to, reference_number, procurement_mode if file_type is downloadable
     $(document).ready(function() {
-        $('#file_type').change(function() {
-            if ($(this).val() == 'downloadable') {
-                $('#file_publishDate').prop('disabled', true);
-                $('#file_closingDate').prop('disabled', true);
-                $('#awarded_to').prop('disabled', true);
-                $('#reference_number').prop('disabled', true);
-                $('#procurement_mode').prop('disabled', true);
+        var fileType = $('#file_type');
+        var fileDepartment = $('#file_department');
+        var departmentDiv = $('#department_div');
+
+        function disableAndHideElements() {
+            fileDepartment.prop('disabled', true);
+            departmentDiv.prop('hidden', true);
+        }
+
+        function handleFileTypeChange() {
+            var selectedFileType = fileType.val();
+
+            disableAndHideElements();
+
+            if (selectedFileType === 'procurement') {
+                fileDepartment.prop('disabled', true);
+            } else if (selectedFileType === 'DOWNLOADABLES') {
+                // No need to do anything extra, elements are already disabled and hidden
+            } else if (selectedFileType === 'MATERIALS') {
+                fileDepartment.prop('disabled', false);
+                departmentDiv.prop('hidden', false);
             } else {
-                $('#file_publishDate').prop('disabled', false);
-                $('#file_closingDate').prop('disabled', false);
-                $('#awarded_to').prop('disabled', false);
-                $('#reference_number').prop('disabled', false);
-                $('#procurement_mode').prop('disabled', false);
+
             }
-        });
+        }
+
+        // Initial setup
+        disableAndHideElements();
+
+        // Handle file type change event
+        fileType.change(handleFileTypeChange);
     });
 </script>
 
@@ -107,106 +117,156 @@
 <div class="modal fade" id="editFilesModal" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-scrollable">
         <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title text-gray-900" id="staticBackdropLabel">Edit Files</h5>
+            <div class="modal-header bg-gradient-info">
+                <h5 class="modal-title text-gray-100" id="staticBackdropLabel">Edit Files</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
 
             <div class="modal-body">
-                <form action="editFiles">
+                <form id="editFiles">
                     <input class="form-control" type="hidden" name="id" id="_id" value="">
                     <input class="form-control" type="hidden" name="trid" id="_trid" value="">
 
+                    <!-- File Type -->
                     <div class="mb-3 row">
-                        <label for="addFilesField" class="col-md-2 form-label">File Type:</label>
-                        <div class="col-md-10">
+                        <label for="editFilesField" class="col-md-3 form-label">File Type:</label>
+                        <div class="col-md-9">
                             <select class="form-control" id="_file_type" name="file_type" required>
-                                <option disabled selected hidden></option>
-                                <option value="downloadable"> Downloadables </option>
-                                <option value="transparency"> Transparencies </option>
+                                <option disabled selected hidden> <-- SELECT --> </option>
+                                <option value="DOWNLOADABLES"> Downloadables </option>
+                                <option value="MATERIALS"> Materials </option>
                              </select>
                         </div>
                     </div>
+                    <!-- For Materials: Department -->
+                    <div class="mb-3 row" id="_department_div" hidden>
+                        <label for="editFilesField" class="col-md-3 form-label">Department:</label>
+                        <div class="col-md-9">
+                            <select class="form-control" id="_file_department" name="file_department" disabled>
+                                <option disabled selected hidden> <-- SELECT --> </option>
+                                <option value="admin"> Admin </option>
+                                <option value="asds"> ASDS </option>
+                                <option value="accounting"> Accounting </option>
+                                <option value="cash and budget"> Accounting </option>
+                                <option value="cid"> CID </option>
+                                <option value="budget"> Budget </option>
+                                <option value="ict"> ICT </option>
+                                <option value="osds"> OSDS </option>
+                                <option value="records"> Records </option>
+                                <option value="sgod"> SGOD </option>
+                                <option value="legal"> Legal </option>
+                                <option value="hrms"> HRMS </option>
+                                <option value="drrmo"> DRRMO </option>
+                                <option value="coa"> COA </option>
+                                <option value="property"> Property </option>
+                                <option value="health"> Health </option>
+                                <option value="publication"> Publication </option>
+                                <option value="school plant"> School Plant </option>
 
+                            </select>
+                        </div>
+                    </div>
+                    <!-- File Title -->
                     <div class="mb-3 row">
-                        <label for="editFilesField" class="col-md-2 form-label">Title:</label>
-                        <div class="col-md-10">
-                            <textarea class="form-control" type="text" id="_file_title" name="file_title" rows="2"></textarea>
+                        <label for="editFilesField" class="col-md-3 form-label">Title:</label>
+                        <div class="col-md-9">
+                            <textarea class="form-control" type="text" id="_file_title" name="file_title" rows="3"></textarea>
+                        </div>
+                    </div>
+                    <!-- File Link -->
+                    <div class="mb-3 row">
+                        <label for="editFilesField" class="col-md-3 form-label">Link:</label>
+                        <div class="col-md-9">
+                            <textarea class="form-control" type="text" id="_file_link" name="file_link" rows="3"></textarea>
                         </div>
                     </div>
 
-                    <div class="mb-3 row">
-                        <label for="editFilesField" class="col-md-2 form-label">Link:</label>
-                        <div class="col-md-10">
-                            <textarea class="form-control" type="text" id="_file_link" name="file_link" rows="2"></textarea>
-                        </div>
+                    <input class="form-control" type="hidden" id="webID" value="<?php echo $_SESSION['webID'] ?>">
+                    <input class="form-control" type="hidden" id="webUsername" value="<?php echo $_SESSION['webUsername'] ?>">
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="submit" id="submit" class="btn btn-primary">Submit</button>
                     </div>
-
-                    <div class="mb-3 row">
-                        <label for="editFilesField" class="col-md-2 form-label">Publish Date:</label>
-                        <div class="col-md-4">
-                            <input class="form-control" type="date" id="_file_publishDate" name="file_publishDate">
-                        </div>
-
-                        <label for="editFilesField" class="col-md-2 form-label">Closing Date:</label>
-                        <div class="col-md-4">
-                            <input class="form-control" type="date" id="_file_closingDate" name="file_closingDate">
-                        </div>
-                    </div>
-
-                    <div class="mb-3 row">
-                        <label for="editFilesField" class="col-md-2 form-label">Awarded To:</label>
-                        <div class="col-md-10">
-                            <input class="form-control" type="text" id="_awarded_to" name="awarded_to">
-                        </div>
-                    </div>
-
-                    <div class="mb-3 row">
-                        <label for="editFilesField" class="col-md-2 form-label">Reference Number:</label>
-                        <div class="col-md-10">
-                            <input class="form-control" type="text" id="_reference_number" name="reference_number">
-                        </div>
-                    </div>
-
-                    <div class="mb-3 row">
-                        <label for="editFilesField" class="col-md-2 form-label">Procurement Mode:</label>
-                        <div class="col-md-10">
-                            <input class="form-control" type="text" id="_procurement_mode" name="procurement_mode">
-                        </div>
-                    </div>
-
-                    <input class="form-control" type="hidden" id="" value="<?php echo "id"//echo $_SESSION[''] ?>">
-                    <input class="form-control" type="hidden" id="" value="<?php echo "id"//echo $_SESSION[''] ?>">
                 </form>
-            </div>
-
-            <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Submit</button>
             </div>
         </div>
     </div>
 </div>
 
 <script>
-    //disable _file_publishDate, _file_closingDate, _awarded_to, _reference_number, _procurement_mode if _file_type is downloadable on load of editFilesModal
-    $(document).ready(function() {
-        $('#_file_type').change(function() {
-            if ($(this).val() == 'downloadable') {
-                $('#_file_publishDate').prop('disabled', true);
-                $('#_file_closingDate').prop('disabled', true);
-                $('#_awarded_to').prop('disabled', true);
-                $('#_reference_number').prop('disabled', true);
-                $('#_procurement_mode').prop('disabled', true);
-            } else {
-                $('#_file_publishDate').prop('disabled', false);
-                $('#_file_closingDate').prop('disabled', false);
-                $('#_awarded_to').prop('disabled', false);
-                $('#_reference_number').prop('disabled', false);
-                $('#_procurement_mode').prop('disabled', false);
-            }
-        });
-    });
+        // Function to disable or enable textareas based on the selected _file_type
+    function disableElementsBasedOnFileType(fileType) {
+        var fileDepartment = $('#_file_department');
+        var departmentDiv = $('#_department_div');
+
+        // Disable and hide all elements
+        disableAndHideElements();
+
+        // Enable and show elements based on _file_type
+        if (fileType === 'DOWNLOADABLES') {
+            fileDepartment.prop('disabled', true);
+            
+        } else if (fileType === 'DOWNLOADABLES') {
+            // No need to do anything extra, elements are already disabled and hidden
+        } else if (fileType === 'MATERIALS') {
+            fileDepartment.prop('disabled', false);
+            departmentDiv.prop('hidden', false);
+        } else {
+        }
+    }
+
+    // Function to disable and hide all relevant elements
+    function disableAndHideElements() {
+        var fileDepartment = $('#_file_department');
+        var departmentDiv = $('#_department_div');
+
+        fileDepartment.prop('disabled', true);
+        departmentDiv.prop('hidden', true);
+    }
 </script>
+
+<!-- Delete File Modal class="modal fade d-block" -->
+<div class="modal fade" id="deleteFilesModal" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-sm">
+        <div class="modal-content">
+            <div class="modal-header bg-gradient-danger">
+                <h5 class="modal-title text-gray-100" id="staticBackdropLabel">Delete File</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
+            <div class="modal-body text-gray-900">
+                <form id="deleteFiles">
+                    <input class="form-control" type="hidden" name="id" id="_id_" value="">
+                    <input class="form-control" type="hidden" name="trid" id="_trid_" value="">
+
+                    <div class="mb-3 row">
+                        <label for="deletefilesField" class="col-md-12 form-label">File Type:</label>
+                        <div class="col-md-12">
+                            <input class="form-control" type="text" id="_file_type_" name="file_type" disabled>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-3 row">
+                        <label for="deletefilesField" class="col-md-12 form-label">File Title:</label>
+                        <div class="col-md-12">
+                            <textarea class="form-control" type="text" id="_file_title_" name="file_title" rows="2" disabled></textarea>
+                        </div>
+                    </div>
+
+                    <input class="form-control" type="hidden" id="webID" value="<?php echo $_SESSION['webID'] ?>">
+                    <input class="form-control" type="hidden" id="webUsername" value="<?php echo $_SESSION['webUsername'] ?>">
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-success" data-dismiss="modal">Cancel</button>
+                        <button type="submit" id="submit" class="btn btn-danger">Yes</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

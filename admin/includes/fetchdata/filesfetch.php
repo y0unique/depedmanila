@@ -13,13 +13,9 @@ $columns = array(
 	1 => 'type',
 	2 => 'title',
 	3 => 'link',
-	4 => 'date',
-	5 => 'publish_date',
-	6 => 'closing_date',
-	7 => 'awarded_to',
-	8 => 'reference_number',
-	9 => 'procurement_mode',
-	10 => 'status'
+	4 => 'department',
+	5 => 'date',
+	6 => 'status'
 );
 
 //Search
@@ -39,7 +35,7 @@ if(isset($_POST['order']))
 }
 else
 {
-	$sql .= " ORDER BY id asc";
+	$sql .= " ORDER BY id asc, type asc";
     
 }
 
@@ -58,16 +54,12 @@ while($row = mysqli_fetch_assoc($query))
 {
 	$sub_array = array();
     $sub_array[] = '<a href="javascript:void();" data-id="'.$row['id'].'" class="btn btn-info btn-sm editfilebtn" ><i class="fas fa-edit"></i></a>  
-					<a href="javascript:void();" data-id="'.$row['id'].'" class="btn btn-danger btn-sm deleteBtn_file" ><i class="fas fa-trash"></i></a>';
+					<a href="javascript:void();" data-id="'.$row['id'].'" class="btn btn-danger btn-sm deletefilebtn" ><i class="fas fa-trash"></i></a>';
 	$sub_array[] = $row['id'];
 	$sub_array[] = $row['type'];
 	$sub_array[] = '<a href="'.$row['link'].'" target="_blank">'.$row['title'].'</a>';
 	$sub_array[] = $row['date'];
-	$sub_array[] = $row['publish_date'];
-	$sub_array[] = $row['closing_date'];
-	$sub_array[] = $row['awarded_to'];
-	$sub_array[] = $row['reference_number'];
-	$sub_array[] = $row['procurement_mode'];
+	$sub_array[] = $row['department'];
 	$sub_array[] = $row['status'];
 	$data[] = $sub_array;
 }

@@ -66,8 +66,6 @@ while($row = mysqli_fetch_assoc($query))
 	$sub_array[] = $row['contact'];
 	$sub_array[] = $row['link'];
 	$sub_array[] = $row['email'];
-    $sub_array[] = '<a href="javascript:void();" data-id="'.$row['id'].'" class="btn btn-info btn-sm editelembtn" ><i class="fas fa-edit"></i></a>  
-					<a href="javascript:void();" data-id="'.$row['id'].'" class="btn btn-danger btn-sm deleteBtn_issuances" ><i class="fas fa-trash"></i></a>';
 	$data[] = $sub_array;
 }
 

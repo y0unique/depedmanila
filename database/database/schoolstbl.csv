@@ -1,0 +1,106 @@
+schooltbl_id,school_id,school_name,school_address,school_principal,school_contact,school_link,school_email,school_district,school_type,school_shsAvailability,school_spedAvailablity,school_status
+,136436,Amado V. Hernandez,"Bo. Magsaysay, Tondo, Manila",Mr. Emmanuel R. Soriano,8-289-6962,avhernandezes.depedmanila.com,emmanuel.soriano001@deped.gov.ph,1,ELEMENTARY SCHOOLS,no,no,active
+,136430,Arsenio H. Lacson,"Younger St,  Balut Tondo, Manila",Ms. Jenneth P. Salanga,8-523-0618,alacsones.depedmanila.com,jenneth.salanga@deped.gov.ph,1,ELEMENTARY SCHOOLS,no,no,active
+,136433,Emilio Jacinto,"Velasquez St. Tondo, Manila",Ms. Minerva M. Rosco,8-244-1015, ejacintoes.depedmanila.com,minerva.rosco001@deped.gov.ph,1,ELEMENTARY SCHOOLS,no,no,active
+,136439,Isabelo Delos Reyes,"Morga-Sande St. Tondo, Manila",Ms. Eleodora B. Vergara,8-242-3823,idelosreyeses.depedmanila.com,eleodora.vergara001@deped.gov.ph,1,ELEMENTARY SCHOOLS,no,no,active
+,136440,Jose Corazon De Jesus,"N. Zamora St. Tondo, Manila",Ms. Emmalyn F. Fortunato-Csiki,8-354-5734,jcdejesuses.depedmanila.com,emmalyn.fotunato002@deped.gov.ph,1,ELEMENTARY SCHOOLS,no,no,active
+,136432,Jose Rizal,"Tayuman-Pingkian St. Tondo, Manila",Ms. Marilou S. Calma,8-354-7207,joserizales.depedmanila.com,marilou.calma002@deped.gov.ph,1,ELEMENTARY SCHOOLS,no,no,active
+,136438,Magat Salamat,"1429 Sta. Maria St. Tondo, Manila",Ms. Blesilda B. Cueto,8-254-6334,magatsalamates.depedmanila.com,blesilda.cueto001@deped.gov.ph,1,ELEMENTARY SCHOOLS,no,no,active
+,136437,Manuel L. Quezon (ES),"Perla-Verona St. Tondo, Manila",Mr. Marcelo D. Mislang,8-254-6158,mlquezones.depedmanila.com,marcelomislang1972@gmail.com,1,ELEMENTARY SCHOOLS,no,no,active
+,136441,Rosauro Almario,"Kagitingan St. Tondo, Manila","Mr. Graciano A. Budoy, Jr.",8-254-1376,raes.depedmanila.com,graciano.budoy@deped.gov.ph,1,ELEMENTARY SCHOOLS,no,no,active
+,136435,Teodoro R. Yangco,"Franco-Dandan St. Tondo, Manila",Mr. Romencio L. Rubio,8-252-2738,tryangcoes.depedmanila.com,romencio.rubio004@deped.gov.ph,1,ELEMENTARY SCHOOLS,no,no,active
+,500566,Timoteo Paez (ES),"Nepa St. Balut, Tondo, Manila",Ms. Marlyn L. Osunero,8-809-9290,tpaezes.depedmanila.com,marlyn.osunero001@deped.gov.ph,1,ELEMENTARY SCHOOLS,no,no,active
+,136434,Gen. Vicente Lim,"Roxas St. Magsaysay Village Tondo, Manila",Ms. Belinda V. Dionisio,-,gvlimes.depedmanila.com,belinda.dionisio001@deped.gov.ph,1,ELEMENTARY SCHOOLS,no,no,active
+,136418,Arsenio C. Herrera," Santos Teodoro St. Tondo, Manila",Ms. Novem Tenero,8-365-5167,acherreraes.depedmanila.com,novem.tenero001@deped.gov.ph,2,ELEMENTARY SCHOOLS,no,no,active
+,136419,Barrio Obrero," Narra Ext. Tondo, Manila",Ms. Rosana G. Ramos,8-362-4966, barrioobreroes.depedmanila.com,rosana.ramos003@deped.gov.ph,2,ELEMENTARY SCHOOLS,no,no,active
+,136426,Francisco Benitez,"143 Solis St. Tondo, Manila",Ms. Violeta S. Labang,8-241-3524,fbenitezes.depedmanila.com,violeta.labang001@deped.gov.ph,2,ELEMENTARY SCHOOLS,no,no,active
+,136428,Gregoria De Jesus,"Dagupan-Bulacan St. Tondo, Manila",Mr. Nichol Wayne F. Fabonan,8-255-2079,gdejesuses.depedmanila.com,nicholwayne.fabonan@deped.gov.ph,2,ELEMENTARY SCHOOLS,no,no,active
+,136443,Gregorio Del Pilar,"Abad Santos-Recto St. Tondo, Manila",Ms. Conchita P. Guiyab,8-353-7418,gdelpilares.depedmanila.com,conchita.guiyab001@deped.gov.ph,2,ELEMENTARY SCHOOLS,no,no,active
+,136427,Lakan Dula (ES),"154 Solis St. Tondo, Manila",Ms. Marites P. Labaguez,8-254-9113,lakandulaes.depedmanila.com,marites.labaguez001@deped.gov.ph,2,ELEMENTARY SCHOOLS,no,no,active
+,136421,Lapu-Lapu,"Molave Cor. Morong St. Tondo, Manila",Ms. Nieves R. Lising ,8-254-2342,lapulapues.depedmanila.com,nieves.lising001@deped.gov.ph,2,ELEMENTARY SCHOOLS,no,no,active
+,136429,Librada Avelino,"Sunog-Apog St. Tondo, Manila",Ms. Dancel A. Udquim,8-748-4475,libradaavelinoes.depedmanila.com,dancel.udquim001@deped.gov.ph,2,ELEMENTARY SCHOOLS,no,no,active
+,136423,Mariano Ponce,"Bugallon-T. Mapua St. Tondo, Manila",Mr. Jose B. Bustillo Jr.,8-354-2109,marianoponcees.depedmanila.com,josejr.bustillo@deped.gov.ph,2,ELEMENTARY SCHOOLS,no,no,active
+,136444,Gen. Maximino Hizon,"Velasquez St., Tondo Manila",Ms. Divina Gracia M. Barrientos,8-254-6162,gmhizones.depedmanila.com,divinagracia.barrientos@deped.gov.ph,2,ELEMENTARY SCHOOLS,no,no,active
+,136424,Melchora Aquino,"Solis St. Tondo, Manila",Mr. Jonathan R. Guillermo,8-254-0264,maquinoes.depedmanila.com,jonathan.guillermo002@deped.gov.ph,2,ELEMENTARY SCHOOLS,no,no,active
+,136425,Plaridel,"398 Solis St. Tondo, Manila",Ms. Cecilia O. Barnachia,8-290-8897,plarideles.depedmanila.com,cecilia.barnachia001@deped.gov.ph,2,ELEMENTARY SCHOOLS,no,no,active
+,136445,CENTEX,"J. Abad Santos Ave.-Recto Tondo, Manila",Mr. Gary Z. Regala,8-523-1077,centexes.depedmanila.com,gary.regala001@deped.gov.ph,2,ELEMENTARY SCHOOLS,no,no,active
+,500567,Felipe G. Calderon (ES),"Morong-Limay-Manuguit St. Tondo, Manila",Mr. John Francis S.  Tiamzon,7-7005-1371,fgcalderones.depedmanila.com,johnfrancis.tiamzon@deped.gov.ph,2,ELEMENTARY SCHOOLS,no,no,active
+,136446,Andres Bonifacio," Tayuman-Ipil St. Sta. Cruz, Manila",Ms. Olivia B. Joaquin,8-523-8558,abonifacioes.depedmanila.com,olivia.joaquin@deped.gov.ph,3,ELEMENTARY SCHOOLS,no,no,active
+,136422,Antonio Luna,"2701 Lico St. Tondo, Manila",Ms. Judy V. Sampang,7-120-6930,antoniolunaes.depedmanila.com,judy.sampang001@deped.gov.ph,3,ELEMENTARY SCHOOLS,no,no,active
+,136453,Apolinario Mabini,"Severino-Soler St. Quiapo, Manila",Ms. Maria Cereza Amparo A. Maguyon,8-643-8750,amabinies.depedmanila.com,cherrymaguyon30@gmail.com,3,ELEMENTARY SCHOOLS,no,no,active
+,136450,Antonio Regidor,"T. Alonzo St. Sta. Cruz, Manila",Mr. Sheruel F. Mamaril,8-255-1289,aregidores.depedmanila.com,sheruel.mamaril002@deped.gov.ph,3,ELEMENTARY SCHOOLS,no,no,active
+,136448,Cecilio Apostol,"Tayabas-F. Huertas St. Sta. Cruz, Manila","Mr. Rosmito A. Rodriguez, Jr.",8-353-5842,cecilioapostoles.depedmanila.com,rosmito.rodriguezjr@deped.gov.ph,3,ELEMENTARY SCHOOLS,no,no,active
+,136447,Eriberto Remigio,"Oroquieta Ext. Sta. Cruz, Manila",Mr. Carlos S. Llarina,8-671-5660,eres.depedmanila.com,carlos.llarina001@deped.gov.ph,3,ELEMENTARY SCHOOLS,no,no,active
+,136451,Francisco Balagtas,"Alvarez-Ipil St. Sta. Cruz, Manila",Ms. Ruth R. Ramirez,8-711-8194,fbalagtases.depedmanila.com,ruth.ramirez001@deped.gov.ph,3,ELEMENTARY SCHOOLS,no,no,active
+,136449,Juan Sumulong,"253 Aragon St. Sta. Cruz, Manila",Ms. Susana C. Nening,8-711-0586,jsumulonges.depedmanila.com,susana.nening001@deped.gov.ph,3,ELEMENTARY SCHOOLS,no,no,active
+,136455,Marcela Agoncillo,"Madrid-San Nicolas St. Binondo, Manila",Ms. Maria Elena B. Mercado,7-005-7522,marcelaagoncilloes.depedmanila.com,mariaelena.mercado003@gmail.com,3,ELEMENTARY SCHOOLS,no,no,active
+,136452,Padre Mariano Gomez,"1224 P. Guevarra St. Sta. Cruz, Manila",Mr. Wilfredo C. Nillo,8-736-3288,pgomezes.depedmanila.com,wilfredo.nillo001@deped.gov.ph,3,ELEMENTARY SCHOOLS,no,no,active
+,136456,Pedro Guevara,"San Fernando-San Nicolas St. Binondo, Manila",Mr. Noel L. Gelua,8-651-1539,pguevaraes.depedmanila.com,noel.gelua@deped.gov.ph,3,ELEMENTARY SCHOOLS,no,no,active
+,136457,Dr. Alejandro Albert,"Dapitan Cor. Casa?as St. Sampaloc, Manila",Ms. Rexie M. Castro,8-741-2396,draalbertes.depedmanila.com,rexie.castro001@deped.gov.ph,4,ELEMENTARY SCHOOLS,no,no,active
+,136459,Benigno Aldana,"J. Fajardo St. Sampaloc, Manila",Ms. Rizalina V. Castro,7-003-0728,benignoaldanaes.depedmanila.com,rizalina.castro@deped.gov.ph,4,ELEMENTARY SCHOOLS,no,no,active
+,136461,Benito Legarda,"J. Fajardo-P. Leoncio St. Sampaloc, Manila",Ms. Edita F. Lopez,8-524-9981,benitolegardaes.depedmanila.com, edita.lopez001@deped.gov.ph,4,ELEMENTARY SCHOOLS,no,no,active
+,136460,Graciano Lopez-Jaena,"Matimyas St. Sampaloc, Manila",Ms. Aireen N. Perez,8-852-5032,glopezjaenaes.depedmanila.com,aireen.perez001@deped.gov.ph,4,ELEMENTARY SCHOOLS,no,no,active
+,136465,Juan Luna," 830 Catalu?a St. Sampaloc, Manila",Mr. Fernando N. Magalang,7-116-9642/8-363-714-7368,juanlunaes.depedmanila.com,fernando.magalang001@deped.gov.ph,4,ELEMENTARY SCHOOLS,no,no,active
+,136462,Gen. Licerio Geronimo,"537 Geronimo St. Sampaloc, Manila",Mr. Rodelio O. Ritual,8-354-0900, glgeronimoes.depedmanila.com,rodelio.ritual001@deped.gov.ph,4,ELEMENTARY SCHOOLS,no,no,active
+,136458,Laong Laan,"Laong Laan Cor. Blumentritt St. Sampaloc, Manila",Mr. Uldarico G. Fundal Jr.,8-256-9716, laonglaanes.depedmanila.com,ufundal@yahoo.com.ph,4,ELEMENTARY SCHOOLS,no,no,active
+,136470,Gen. Miguel Malvar,"Mangga Ave. Sta. Mesa, Manila",Ms. Marlnie T. Dela Cruz,8-713-0654,gmmalvares.depedmanila.com,marlnie.delacruz001@deped.gov.ph,4,ELEMENTARY SCHOOLS,no,no,active
+,136464,Moises Salvador,"Geronimo St. Sampaloc, Manila",Mr. Jerome M. Macanda,8-521-1875,msalvadores.depedmanila.com,jerome.macanda001@deped.gov.ph,4,ELEMENTARY SCHOOLS,no,no,active
+,136467,Padre Burgos,"Buenos Aires-Altura St. Sta. Mesa, Manila",Ms. Trinidad R. Galang,8-713-0652,pburgoses.depedmanila.com,trinidad.galang001@deped.gov.ph,4,ELEMENTARY SCHOOLS,no,no,active
+,136468,Pedro Pelaez,"D. Santiago St. Sta. Mesa, Manila",Mr. Vladimir B. Paraiso,7-118-0355,pedropelaezes.depedmanila.com,vladimir.paraiso001@deped.gov.ph,4,ELEMENTARY SCHOOLS,no,no,active
+,136463,Trinidad Tecson,"510 Geronimo St. Sampaloc, Manila",Ms. Maria Milagros R. Nonog,8-296-0804,trinidadtecsones.depedmanila.com,mariamilagros.rimiendo@deped.gov.ph,4,ELEMENTARY SCHOOLS,no,no,active
+,500568,Antonio Maceda (ES),"Buenos Aires-Altura St. Sta. Mesa, Manila",Ms. Jinabelle V. Prieto,8-714-7368,amacedaes.depedmanila.com,jinabelle.prieto001@deped.gov.ph,4,ELEMENTARY SCHOOLS,no,no,active
+,136466,Valeriano E. Fugoso (ES),"Manila Boystown Complex, Marikina City",Mr. Josefino A. Mendoza II,8-934-6254,valerianofugosoes.depedmanila.com,josefino.mendoza001@deped.gov.ph,4,ELEMENTARY SCHOOLS,no,no,active
+,136477,Aurora A. Quezon,"San Andres St. Malate, Manila",Mr. Randy R. Emen,-,aaqes.depedmanila.com,randy.emen001@deped.gov.ph,5,ELEMENTARY SCHOOLS,no,no,active
+,136474,Celedonio Salvador,"Merced St. Paco, Manila",Ms. Novielyn F. Radam,8-563-7197,csalvadores.depedmanila.com,novielyn.radam001@deped.gov.ph,5,ELEMENTARY SCHOOLS,no,no,active
+,136476,Epifanio Delos Santos," 1725 Singalong-Malvar St. Malate, Manila",Ms. Guia S. Laguitao,8-525-7173,edses.depedmanila.com,guia.laguitao001@deped.gov.ph,5,ELEMENTARY SCHOOLS,no,no,active
+,136484,Fernando Ma. Guerrero,"Pedro Gil-Onyx St. Paco, Manila",Ms. Josepina D. Villareal,8-722-7480,fmges.depedmanila.com,josepina.villareal001@deped.gov.ph,5,ELEMENTARY SCHOOLS,no,no,active
+,136478,Herminigildo J. Atienza,"Port Area, Manila",Mr. Agustin C. Baldicanas,8-241-7559,hjatienzaes.depedmanila.com,agustin.baldicanas001@deped.gov.ph,5,ELEMENTARY SCHOOLS,no,no,active
+,136473,Justo Lukban,"G. Apacible St. Paco, Manila",Ms. Reynora V. Laurenciano,8-525-8016, justolukbanes.depedmanila.com,reynora.laurenciano001@deped.gov.ph,5,ELEMENTARY SCHOOLS,no,no,active
+,136487,Margarita Roxas de Ayala,"A. Francisco cor. Arellano Sts. Sta Ana, Manila",Ms. Rosemarie B. Ponce,8-563-1438,mrdaes.depedmanila.com,rosemarie.ponce003@deped.gov.ph,5,ELEMENTARY SCHOOLS,no,no,active
+,136479,Rafael Palma,Vito Cruz-Zobel Roxas St. Manila,Mr. Rodel C. Sampang,8-895-7416,rpalmaes.depedmanila.com,rpalmaes.manila@deped.gov.ph,5,ELEMENTARY SCHOOLS,no,no,active
+,136968,Sen. Benigno Aquino Jr.,"Port Area, Manila",Mr. Jose R. Mi?¤ano,7-277-4530,sbaes.depedmanila.com,jose.minano001@deped.gov.ph,5,ELEMENTARY SCHOOLS,no,no,active
+,136475,Silahis ng Katarungan,"1520 Paz St. Paco, Manila",Ms. Ma. Gemma C. Perucho,8-658-7030,sikat.depedmanila.com,gemmaperucho@gmail.com,5,ELEMENTARY SCHOOLS,no,no,active
+,136471,Bacood,"Mag. Albert St. Sta. Mesa, Manila",Mr. Leo C. Cabaruan,7-119-6532,bacoodes.depedmanila.com,leo.cabaruan001@deped.gov.ph,6,ELEMENTARY SCHOOLS,no,no,active
+,136480,Bagong Barangay,"Zamora St. Pandacan, Manila",Ms. Maria Bernadeth A. Pablo,8-523-8895,bagongbarangayes.depedmanila.com,mariabernadeth.pablo003@deped.gov.ph,6,ELEMENTARY SCHOOLS,no,no,active
+,136482,Bagong Diwa,"Linceo-Adonis St. Pandacan, Manila",Mr. Antonio C. Lagundi,8-562-1027,bagongdiwaes.depedmanila.com,antonio.lagundi001@deped.gov.ph,6,ELEMENTARY SCHOOLS,no,no,active
+,136483,Beata,"Beata Cor. Certeza St. Pandacan, Manila",Mr. Benjamin M. Castro,8-288-3662,beataes.depedmanila.com,benjamin.castro@deped.gov.ph,6,ELEMENTARY SCHOOLS,no,no,active
+,136486,Fernando Amorsolo,"Old Panaderos St. Sta. Ana, Manila",Mr. Philip Marciano D.L. Reyes,8-563-9986,famorsoloes.depedmanila.com,philip.reyes002@deped.gov.ph,6,ELEMENTARY SCHOOLS,no,no,active
+,136454,Geronimo Santiago,"J. Nepomuceno St. San Miguel, Manila",Mr. Gil T. Alintana,-,gsantiagoes.depedmanila.com,gil.alinatana001@deped.gov.ph,6,ELEMENTARY SCHOOLS,no,no,active
+,136472,Pio Del Pilar,"Pureza St. Sta. Mesa, Manila",Dr. Meriam B. Collantes,8-714-7400,piodelpilares.depedmanila.com,meriam.collantes001@deped.gov.ph,6,ELEMENTARY SCHOOLS,no,no,active
+,136485,Sta. Ana,"M. Roxas St. Sta. Ana, Manila",Mr. Diomedes T. Rosete,8-559-7793,staanaes.depedmanila.com,diomedes.rosete001@deped.gov.ph,6,ELEMENTARY SCHOOLS,no,no,active
+,136489,Tomas Earnshaw,"A. Bautista Punta Sta. Ana, Manila",Ms. Helen B. Bautista,8-532-1758,tomasearnshawes.depedmanila.com,helen.bautista001@deped.gov.ph,6,ELEMENTARY SCHOOLS,no,no,active
+,136481,Jacinto Zamora,"E. Zamora St. Pandacan, Manila",Ms. Guia S. Morris,8-516-8263,jzamoraes.depedmanila.com,guia.morris001@deped.gov.ph,6,ELEMENTARY SCHOOLS,no,no,active
+,500569,Gen. Emilio Aguinaldo (ES),"Punta Sta. Ana, Manila",Ms. Carol H. Salba,8-523-1913,emilioaguinaldoes.depedmanila.com,carol.salba002@deped.gov.ph,6,ELEMENTARY SCHOOLS,no,no,active
+,305288,Dr. Juan G. Nolasco,"2252 Tioco Park, Tondo, Manila",Sonny D. Valenzuela,8254-53-49 /8254-99-80,drjgnolascohs.depedmanila.com,305288@deped.gov.ph,1,JUNIOR HIGH SCHOOLS,yes,no,active
+,305290,Gregorio Perfecto,"Ricafort St. Tondo, Manila",June Hayden R. Sinson,8742-46-29 / 8708-85-74,gperfectohs.depedmanila.com,305290@deped.gov.ph,1,JUNIOR HIGH SCHOOLS,no,no,active
+,305291,Tondo High School,"Quezon St. Bo. Magsaysay Tondo, Manila",Maria Eva Nacion,8254-55-58 /8251-00-45,tondohs.depedmanila.com,305291@deped.gov.ph,1,JUNIOR HIGH SCHOOLS,yes,no,active
+,305292,Antonio J. Villegas,"Bo. Magsaysay Tondo, Manila",Lilybeth F. Cuento,8354-19-73,ajvillegashs.depedmanila.com,305292@deped.gov.ph,1,JUNIOR HIGH SCHOOLS,no,no,active
+,500566,Timoteo Paez,"Buendia St. cor. Younger St. Tondo, Manila",Amor P. Dugay,8522-90-92,tpaezhs.depedmanila.com,500566@deped.gov.ph,1,JUNIOR HIGH SCHOOLS,yes,no,active
+,305295,Lakan Dula,"Juan Luna St. Tondo, Manila",Merle Angon,8252-97-94 / 8252-50-94,lakandulahs.depedmanila.com,305295@deped.gov.ph,2,JUNIOR HIGH SCHOOLS,yes,no,active
+,305294,Jose P. Laurel,"Pampanga St. Tondo, Manila",Julius Jardiolin,8-715-6883/8-714-3025,jplaurelhs.depedmanila.com,305294@deped.gov.ph,2,JUNIOR HIGH SCHOOLS,yes,no,active
+,305296,Pres. Sergio Osmena,"Earnshaw St. Cor. Bulacan St. Tondo, Manila",Mark Gil Tabor,8-708-2082,sergioosmenahs.depedmanila.com,305296@deped.gov.ph,2,JUNIOR HIGH SCHOOLS,yes,no,active
+,305297,Manuel L. Quezon,"Blumentritt St. Sta. Cruz, Manila",Eddieza E. Durens,8711-26-81,mlquezonhs.depedmanila.com,305297@deped.gov.ph,2,JUNIOR HIGH SCHOOLS,no,no,active
+,305298,Florentino Torres,"Juan Luna St. Gagalangin Tondo, Manila",Ma. Pura S. Talattad,8-252-5467,ftorreshs.depedmanila.com,305298@deped.gov.ph,2,JUNIOR HIGH SCHOOLS,yes,no,active
+,500567,Felipe G. Calderon,"Hermosa St. Tondo, Manila",Edmund Villareal,8253-15-75 /8254-57-11,fgcalderones.depedmanila.com,500567@deped.gov.ph,2,JUNIOR HIGH SCHOOLS,yes,no,active
+,305299,Dona Teodora Alonzo,"Alvarez St. Cor. Ipil St. Sta. Cruz, Manila",Lourdes M. Florendo,8-807-8669,dtahs.depedmanila.com,305299@deped.gov.ph,3,JUNIOR HIGH SCHOOLS,yes,no,active
+,305300,Cayetano Arellano,"D. Jose-T. Alonzo St. Sta. Cruz, Manila",John Butch P. Locara,8711-59-28 / 8732-74-04,cayetanoarellanohs.depedmanila.com,305300@deped.gov.ph,3,JUNIOR HIGH SCHOOLS,yes,no,active
+,305301,Ramon Avancena,"J. Nepomuceno St. Quiapo, Manila",Jeusuel Nonnatus N. De Luna,8-733-9971,ramonavancenahs.depedmanila.com,305301@deped.gov.ph,3,JUNIOR HIGH SCHOOLS,yes,no,active
+,305302,Jose Abad Santos,"Urbiztondo-Numancia St. San Nicolas, Manila",Elena C. Reyes,8239-96-37 ,joseabadsantoshs.depedmanila.com,305302@deped.gov.ph,3,JUNIOR HIGH SCHOOLS,yes,no,active
+,305303,Rajah Soliman,"Lachambre St. Binondo, Manila",Raffy Caballes,8-734-5540/8-735-3476,rajahsolimansths.depedmanila.com,305303@deped.gov.ph,3,JUNIOR HIGH SCHOOLS,yes,no,active
+,305304,Esteban Abada,"Blumentritt St. Sampaloc, Manila",Mary Grace Awkit,8-477-2487/8-723-4960,estebanabadahs.depedmanila.com,305304@deped.gov.ph,4,JUNIOR HIGH SCHOOLS,no,no,active
+,500568,Antonio Maceda (HS),"Magsaysay Blvd. Sta. Mesa, Manila",Danilo B. Estavillo,8715-68-83 / 8714-30-25,amacedahs.depedmanila.com,500568@deped.gov.ph,4,JUNIOR HIGH SCHOOLS,yes,no,active
+,305306,Ramon Magsaysay,"Espa?a Blvd. Sampaloc, Manila",Gene T. Pangilinan,8731-32-25 / 8938-53-46,ramonmagsaysayhs.depedmanila.com,305306@deped.gov.ph,4,JUNIOR HIGH SCHOOLS,no,no,active
+,305307,Claro M. Recto,"3rd St., C. Aguila, San Miguel, Manila",Mercedita Insigne,8734-55-40 / 8735-34-76,cmrectohs.depedmanila.com,305307@deped.gov.ph,4,JUNIOR HIGH SCHOOLS,yes,no,active
+,305308,Valeriano E. Fugoso,"Parang, Marikina",Josefino Mendoza,8-625-6778,valerianofugosohs.depedmanila.com,305308@deped.gov.ph,4,JUNIOR HIGH SCHOOLS,yes,no,active
+,305309,Manuel G. Araullo,"Taft Ave. Cor. U.N. Ave. Ermita, Manila",Mayet R. Dela Cruz,8-805-8547,mgaraullo.depedmanila.com,305309@deped.gov.ph,5,JUNIOR HIGH SCHOOLS,yes,no,active
+,305318,Manuel A. Roxas,"Canonigo St. Paco, Manila",Roland Dela Cruz,8353-69-35 /  8562-24-14,maroxashs.depedmanila.com,305318@deped.gov.ph,5,JUNIOR HIGH SCHOOLS,yes,no,active
+,305311,Manila High,"Victoria-Muralla St. Intramuros, Manila",Melanie T. Pascua,8-525-4755,manilahs.depedmanila.com,305311@deped.gov.ph,5,JUNIOR HIGH SCHOOLS,yes,no,active
+,305312,Manila Science,"Taft Ave. P. Faura, Manila",Manolo G. Pe?¤a,8-525-6197,manilasciencehs.depedmanila.com,305312@deped.gov.ph,5,JUNIOR HIGH SCHOOLS,yes,no,active
+,305313,Ignacio Villamor,"Pasig Line St. Sta. Ana, Manila","Dante Felizardo, Ed. D.",8563-21-08,ignaciovillamorhs.depedmanila.com,305313@deped.gov.ph,5,JUNIOR HIGH SCHOOLS,yes,no,active
+,319401,Pres. Corazon C. Aquino,"Port Area, Manila",Ma. Josefina B. Luna,8546-94-32,pccahs.depedmanila.com,319401@deped.gov.ph,5,JUNIOR HIGH SCHOOLS,yes,no,active
+,305315,Victorino Mapa,"300 San Rafael St. San Miguel, Manila",Robert P. Velasquez,8353-30-40   ,vmapahs.depedmanila.com,305315@deped.gov.ph,6,JUNIOR HIGH SCHOOLS,yes,no,active
+,305316,Mariano Marcos,"2090 M. Carreon St. Sta. Ana, Manila",Consolacion K. Naanep,8564-28-93 / 8562-01-00,mmmhs.depedmanila.com,305316@deped.gov.ph,6,JUNIOR HIGH SCHOOLS,yes,no,active
+,305317,Elpidio Quirino,"Bacood St. Sta Mesa, Manila",Ma. Teresa Custodio,8559-54-83 / 8256-64-47,elpidioquirinohs.depedmanila.com,305317@deped.gov.ph,6,JUNIOR HIGH SCHOOLS,yes,no,active
+,305310,Carlos P. Garcia,"Jesus St. Pandacan, Manila",Diosdado DG. Florendo,8562-76-87,cpgarciahs.depedmanila.com,305310@deped.gov.ph,6,JUNIOR HIGH SCHOOLS,yes,no,active
+,305319,Eulogio Rodriguez,"Nagtahan St. Sampaloc, Manila",Divina T. Maninang,8714-07-53,ervhs.depedmanila.com,305319@deped.gov.ph,6,JUNIOR HIGH SCHOOLS,yes,no,active
+,500569,Gen. Emilio Aguinaldo,"Punta St. Sta. Ana, Manila",Nilo T. Salazar,8535-17-14,emilioaguinaldohs.depedmanila.com,500569@deped.gov.ph,6,JUNIOR HIGH SCHOOLS,yes,no,active

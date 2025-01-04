@@ -64,8 +64,8 @@ $data = array();
 while($row = mysqli_fetch_assoc($query))
 {
 	$sub_array = array();
-    $sub_array[] = '<a href="javascript:void();" data-id="'.$row['id'].'" class="btn btn-info btn-sm editschoolbtn" ><i class="fas fa-edit"></i></a>  
-					<a href="javascript:void();" data-id="'.$row['id'].'" class="btn btn-danger btn-sm deleteBtn_school" ><i class="fas fa-trash"></i></a>';
+    $sub_array[] = '<a href="javascript:void();" data-id="'.$row['school_id'].'" class="btn btn-info btn-sm editschoolbtn" ><i class="fas fa-edit"></i></a>  
+					<a href="javascript:void();" data-id="'.$row['school_id'].'" class="btn btn-danger btn-sm deleteschoolbtn" ><i class="fas fa-trash"></i></a>';
 	$sub_array[] = $row['school_id'];
 	$sub_array[] = $row['id'];
 	$sub_array[] = $row['district'];

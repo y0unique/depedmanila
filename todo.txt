@@ -1,0 +1,20 @@
+--priority
+-admin
+•Push notifications using ajax
+•
+• editing users, delete, reseting password
+offices, fetch, code, modals
+add to database picture and type of employee
+--
+users
+edit password
+add to database profile picture
+--
+miscelaneous
+carousel
+social media
+--
+topbar add the modals for settings
+add the activity log for each user
+
+case sensitive in login username

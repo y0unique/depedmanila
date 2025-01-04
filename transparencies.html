@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Transparencies | Deped Manila</title>
+        <meta name="viewport"    content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Department of Education Manila" />
+        <meta name="keywords"    content="DepEd, Manila, Schools Division, Division of City Schools, Website of DepEd Manila, Official Website" />
+        <meta name="author"      content="zeraphm"  />
+        <!-- favicon -->
+        <link rel="shortcut icon" href="admin/images/logo/favicon.ico">
+        <!-- Magnific -->
+        <link href="admin/css/home/magnific-popup.css" rel="stylesheet" type="text/css" />
+        <!-- css -->
+        <link href="admin/css/home/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="admin/css/home/materialdesignicons.min.css" rel="stylesheet" type="text/css" />
+        <link href="admin/css/home/style.css" rel="stylesheet" type="text/css" />
+        <!-- Slider -->        
+        <link rel="stylesheet" href="admin/css/home/slick-theme.css"/>
+        <link rel="stylesheet" href="admin/css/home/slick.css"/>
+        
+        <!-- css -->
+        <link href="admin/css/home/bootstrap1.min.css" id="bootstrap-style" rel="stylesheet" type="text/css" />
+        
+        <link href="admin/css/home/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="admin/css/home/materialdesignicons.min.css" rel="stylesheet" type="text/css" />
+        <link href="admin/css/home/style.css" rel="stylesheet" type="text/css" />
+
+        
+        <!-- Data Table -->
+        <link rel="stylesheet" href="admin/datatables/dataTables.bootstrap5.min.css">
+        <script defer src="admin/datatables/dataTables.fixedColumns.min.js"></script>
+        
+        <!-- Scripts -->
+        <script defer src="admin/js/home/script.js"></script>
+    </head>
+
+        <!-- preloader -->
+        <div class="spinner-wrapper">
+
+            <div class="image" >
+                <img class="imagePreloader"  src="admin/images/logo/DepEd_logo_small.png" alt="depedManilaIcon">
+            </div>
+            <div class="spinner-border text-primary" role="status"></div>
+        </div>
+        <style>
+        .spinner-wrapper{
+            background-color: #fff;
+            position: fixed; 
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index : 9999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all 0.2s ease-in-out;
+        }
+        .spinner-border{
+            width: 101px;
+            height: 101px;
+            position: absolute;
+        }
+        .imagePreloader{
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+        </style>
+        <script>
+            const spinnerWrapperEl = document.querySelector(".spinner-wrapper");
+         
+            setTimeout(() => {
+                spinnerWrapperEl.style.opacity = 0;
+            }, 1000);
+        
+            window.addEventListener("load", function(){
+                spinnerWrapperEl.style.opacity = 0;
+                setTimeout(() => {
+                    spinnerWrapperEl.style.display = "none";
+                }, 200);
+            })
+        </script>
+        <!-- preloader end -->
+    <body>
+        <!-- Navbar Start -->
+        <nav class="navbar navbar-expand-lg fixed-top navbar-custom navbar-light nav-sticky">
+            <div class="container">
+                <a href="index"><img src="admin/images/logo/DepEd_logo_small.png"
+                    style="height: 50px; width:50px; margin-right:5px;"></a>
+                <a class="navbar-brand" href="index" target="__blank">SDO Manila</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+                    aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="mdi mdi-menu"></span>
+                </button><!--end button-->
+        
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul class="navbar-nav ml-auto">
+        
+                        <!-- home -->
+                        <li class="nav-item" id="index">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+        
+                        <!-- about us -->
+                        <li class="nav-item dropdown" id="aboutus">
+                            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false">
+                                About Us
+                            </a>
+        
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item" href="history.html" id="history">History</a>
+                                <a class="dropdown-item" href="mission-vision.html" id="visionMision">Mission, Vision.  <br>Core Values, Quality Objectives</a>
+                                <a class="dropdown-item" href="directory.html" id="directory">Directory</a>
+                                <a class="dropdown-item" href="underconstruction.html" id="citizenscharter">Citizen's Charter</a>
+                            </div>
+                        </li>
+        
+                        <!-- transparencies -->
+                        <li class="nav-item dropdown active" id="transparencies">
+                            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false">
+                                Transparencies
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item" href="#home">
+                                    Transparencies
+                                </a>
+        
+                                <div class="dropdown-divider"></div>
+        
+                                <a class="dropdown-item dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false">
+                                    BAC
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink1">
+                                    <a class="dropdown-item" href="underconstruction.html">PhilGEPS</a>
+                                    <a class="dropdown-item" href="underconstruction.html">Invitation To Bid</a>
+                                    <a class="dropdown-item" href="underconstruction.html">Request for Quotation</a>
+                                    <a class="dropdown-item" href="underconstruction.html">Bid Bulletin</a>
+                                    <a class="dropdown-item" href="underconstruction.html">Awarded</a>
+                                    <a class="dropdown-item" href="underconstruction.html">Annual Procurement Plan</a>
+                                    <a class="dropdown-item" href="underconstruction.html">Project Procurement Management Plan</a>
+                                    <a class="dropdown-item" href="underconstruction.html">Procurement Monitoring Report</a>
+                                    <a class="dropdown-item" href="underconstruction.html">Agency Procurement Compliannce and Performance Indicators</a>
+                                </div>
+                                    
+                            </div>
+                        </li>
+        
+                        <!-- issuances -->
+                        <li class="nav-item dropdown" id="issuances">
+                            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false">
+                                Issuances
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li>
+                                    <a class="dropdown-item" href="issuances.html">Division Office</a>
+                                </li>
+                                <div class="dropdown-divider"></div>
+                                <li>
+                                    <a class="dropdown-item" href="#">Regional Office &raquo;</a>
+                                    <ul class="dropdown-menu dropdown-submenu">
+                                        <li>
+                                            <a class="dropdown-item" href="https://www.depedncr.com.ph/home-2/about/" target="__blank">Regional Adivsories</a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" href="https://www.depedncr.com.ph/home-2/regional-memoranda/" target="__blank">Regional Memoranda</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">
+                                    Central Office &raquo;
+                                    </a>
+                                    <ul class="dropdown-menu dropdown-submenu">
+                                        <li>
+                                            <a class="dropdown-item" href="https://www.deped.gov.ph/category/issuances/deped-advisories/" target="__blank">DepEd Adivsories</a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" href="https://www.deped.gov.ph/category/issuances/deped-memoranda/#" target="__blank">DepEd Memoranda</a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" href="https://www.deped.gov.ph/category/issuances/deped-orders/" target="__blank">DepEd Orders</a>
+                                        </li>
+                                        
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+        
+                        <!-- services -->
+                        <li class="nav-item dropdown" id="services">
+                            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false">
+                                Pr1me Services
+                            </a>
+        
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item" href="https://prime-manila-dots.depedncr.com.ph/" target="_blank" style="text-transform: none;" style="text-transform: none;">
+                                    PR1ME DoTS
+                                </a>
+                                <a class="dropdown-item" href="https://prime-manila-isosys.depedncr.com.ph/" target="_blank" style="text-transform: none;">
+                                    PR1ME ISOSys
+                                </a>
+                                <a class="dropdown-item" href="https://prime-manila-opdash.depedncr.com.ph/" target="_blank" style="text-transform: none;">
+                                    PR1ME OPDash
+                                </a>
+                                <a class="dropdown-item" href="https://prime-manila-ppms.depedncr.com.ph/" target="_blank" style="text-transform: none;">
+                                PR1ME PMS
+                                </a>
+                            </div>
+                        </li>
+        
+                        <!-- resources -->
+                        <li class="nav-item" id="resources">
+                            <a class="nav-link" href="resources.html">Resources</a>
+                        </li>
+        
+                    </ul><!--end navbar nav-->
+                </div><!--end collapse-->
+            </div><!--end container-->
+        </nav><!--end navbar-->
+        <!-- Navbar End -->
+        
+        <!-- Transparency Start -->
+        <section class="section bg-light" id="home">
+            <div class="container">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a class="text-custom" href="index.html">Home</a></li>
+                        <li class="breadcrumb-item" aria-current="page">Transparencies</li>
+                        <li class="breadcrumb-item active" aria-current="page">Transparency</li>
+                    </ol>
+                </nav>
+                <div class="row justify-content-center">
+                    <div class="col-12 text-center">
+                        <div class="section-title">
+                            <h4 class="title text-uppercase mb-4">Transparencies</h4>
+                            <p class="text-danger mx-auto para-desc mb-0" style="font-style: italic;"> *Please use the search field to filter the table.*</p>
+                        </div>
+                    </div><!--end col-->
+                </div><!--end row-->
+                
+                <div class="row mt-4">
+                    <div class="col-12">
+                        <ul class="nav nav-pills nav-justified" id="pills-tab" role="tablist">
+                            
+                            <li class="nav-item mb-4 pt-2">
+                                <a class="nav-link active" id="invitaion-bid-tab" data-toggle="pill" href="#invitaion-bid" role="tab" aria-controls="invitaion-bid" aria-selected="false">
+                                    <div class="capabilities text-center rounded pt-2 pb-2">
+                                        <div class="icon bg-custom mb-3">
+                                            <i class="mdi mdi-email-open text-white"></i>
+                                        </div>
+                                        <h4 class="title font-weight-normal mb-0">INVITATION<br>TO BID</h4>
+                                    </div>
+                                </a><!--end nav link-->
+                            </li><!--end nav item-->
+                            
+                            <li class="nav-item mb-4 pt-2">
+                                <a class="nav-link" id="projects-completed-tab" data-toggle="pill" href="#projects-completed" role="tab" aria-controls="projects-completed" aria-selected="false">
+                                    <div class="capabilities text-center rounded pt-2 pb-2">
+                                        <div class="icon bg-custom mb-3">
+                                            <i class="mdi mdi-timetable text-white"></i>
+                                        </div>
+                                        <h4 class="title font-weight-normal mb-0">PROJECTS<br>COMPLETED</h4>
+                                    </div>
+                                </a><!--end nav link-->
+                            </li><!--end nav item-->
+                            
+                            <li class="nav-item mb-4 pt-2">
+                                <a class="nav-link" id="financial-reports-tab" data-toggle="pill" href="#financial-reports" role="tab" aria-controls="financial-reports" aria-selected="false">
+                                    <div class="capabilities text-center rounded pt-2 pb-2">
+                                        <div class="icon bg-custom mb-3">
+                                            <i class="mdi mdi-file-chart text-white"></i>
+                                        </div>
+                                        <h4 class="title font-weight-normal mb-0">FINANCIAL<br>REPORTS</h4>
+                                    </div>
+                                </a><!--end nav link-->
+                            </li><!--end nav item-->
+                            
+                            <li class="nav-item mb-4 pt-2">
+                                <a class="nav-link" id="transparency-board-tab" data-toggle="pill" href="#transparency-board" role="tab" aria-controls="transparency-board" aria-selected="false">
+                                    <div class="capabilities text-center rounded pt-2 pb-2">
+                                        <div class="icon bg-custom mb-3">
+                                            <i class="mdi mdi-file-pdf text-white"></i>
+                                        </div>
+                                        <h4 class="title font-weight-normal mb-0">TRANSPARENCY<br>BOARD</h4>
+                                    </div>
+                                </a><!--end nav link-->
+                            </li><!--end nav item-->
+
+                        </ul><!--end nav pills-->
+
+                        <div class="tab-content mt-3" id="pills-tabContent">
+                            <div class="tab-pane fade show active" id="invitaion-bid" role="tabpanel" aria-labelledby="invitaion-bid-tab">
+                                <div class="capabilities-content border rounded p-4">
+                                    <div class="row align-items-center">
+                                        <div class="col-md-12">
+                                            <h4 class="title">INVITATION TO BID</h4>
+                                            
+                                            <table id="invitation-table" class="table table-striped" style="width:100%">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Publish Date</th>
+                                                        <th>Closing Date</th>
+                                                        <th>Procurement mode</th>
+                                                        <th>No.</th>
+                                                        <th>Title</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody id="invitation-table-body">
+                                                    <!-- Data rows will be injected here by JavaScript -->
+                                                </tbody>
+                                            </table>
+
+                                        </div><!--end col-->
+
+                                    </div><!--end row-->
+                                </div>
+                            </div><!--end teb pane-->
+                            
+                            <div class="tab-pane fade" id="projects-completed" role="tabpanel" aria-labelledby="projects-completed-tab">
+                                <div class="capabilities-content border rounded p-4">
+                                    <div class="row align-items-center">
+                                        <div class="col-md-12">
+                                            <h4 class="title">PROJECTS COMPLETED</h4>
+                                            
+                                            <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQJulImJ56sAxWatBCKbwxszAtFuPBN_i00YFYkkzVGDMQFcxbpyHYPOSMXYPNkIQ/pubhtml?widget=true&amp;headers=false" style="width:100%; height:1000px; border: 2px solid black;"></iframe>
+
+                                        </div><!--end col-->
+                                    </div><!--end row-->
+                                </div>
+                            </div><!--end teb pane-->
+
+                            <div class="tab-pane fade" id="financial-reports" role="tabpanel" aria-labelledby="financial-reports-tab">
+                                <div class="capabilities-content border rounded p-4">
+                                    <div class="row align-items-center">
+                                        <div class="col-md-12">
+                                            <h4 class="title">FINANCIAL REPORTS</h4>
+                                            
+                                            <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQwgHOs9osEa_CIt-XsfgxkGIFMfRw_6MFBFJqFojRP0m1QfmFWyj4ynquiX2ByFXMuuSBKLRP5dqVB/pubhtml?widget=true&amp;headers=false" style="width:100%; height:1000px; border: 2px solid black;"></iframe>
+
+                                        </div><!--end col-->
+                                    </div><!--end row-->
+                                </div>
+                            </div><!--end teb pane-->
+                            
+                            
+                            <div class="tab-pane fade" id="transparency-board" role="tabpanel" aria-labelledby="transparency-board-tab">
+                                <div class="capabilities-content border rounded p-4">
+                                    <div class="row align-items-center">
+                                        <div class="col-md-12">
+                                        <h4 class="title">TRANSPARENCY BOARD</h4>
+                                            <div class="row">
+                                            <div class="col-xl-12">
+				                                    <div class="card">
+				                                        <div class="card-body">
+				            
+				                                            <!-- Nav tabs -->
+				                                            <ul class="nav nav-tabs" role="tablist">
+				                                                <li class="nav-item">
+				                                                    <a class="nav-link" data-bs-toggle="tab" href="#home1" role="tab">
+				                                                        <span class="d-block d-sm-none"><i class="fas fa-home"></i></span>
+				                                                        <span class="d-none d-sm-block">Transparency Board Files</span>    
+				                                                    </a>
+				                                                </li>
+				                                                <li class="nav-item">
+				                                                    <a class="nav-link active" data-bs-toggle="tab" href="#profile" role="tab">
+				                                                        <span class="d-block d-sm-none"><i class="far fa-user"></i></span>
+				                                                        <span class="d-none d-sm-block">Procurements</span>    
+				                                                    </a>
+				                                                </li>
+				                                            </ul>
+
+                                                            <!-- Tab panes -->
+				                                            <div class="tab-content p-3 text-muted">
+                                                                <div class="tab-pane" id="#" role="tabpanel">
+                                                                    <p class="mb-0">
+                                                                        <table id="transparency_board-table" class="table table-striped" style="width:100%">
+                                                                            <thead>
+                                                                                <tr>
+                                                                                    <th>Title</th>
+                                                                                </tr>
+                                                                            </thead>
+                                                                            <tbody id="transparency-board-table-body">
+                                                                                <!-- Rows will be injected here by JavaScript -->
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </p>
+                                                                </div>
+                                                            
+                                                                <div class="tab-pane active" id="profile" role="tabpanel">
+                                                                    <p class="mb-0">
+                                                                        <div class="col-xl-12">
+                                                                            <div class="card">
+                                                                                <div class="card-body">
+                                                                                    <div class="accordion accordion-flush" id="accordionFlushExample" role="tablist">
+                                                                                        <!-- Accordion items will be injected here by JavaScript -->
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+				                                    </div>
+				                                </div>
+				                            </div>
+
+                                        </div><!--end col-->
+                                    </div><!--end row-->
+                                </div>
+                            </div><!--end teb pane-->
+                            
+                        </div><!--end tab content-->
+                    </div><!--end col-->
+                </div><!--end row-->
+            </div><!--end container-->
+        </section><!--end section-->
+        <!-- Transparency End -->
+
+        
+
+        <!-- Seals Start -->
+        <section class="section-two">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="slider autoplay">
+                            <div><a href="https://www.deped.gov.ph/" target="_blank"><img src="admin/images/testi/Department_of_Education.png" class="img-fluid mx-auto d-block" alt="seal"></a></div>
+                            <div><a href="https://privacy.gov.ph/transparency-seal/" target="_blank"><img src="admin/images/testi/TransSeal.png" class="img-fluid mx-auto d-block" alt="seal"></a></div>
+                            <div><a href="https://www.foi.gov.ph/" target="_blank"><img src="admin/images/testi/freedomOfInfo.png" class="img-fluid mx-auto d-block" alt="seal"></a></div>
+                            <div><a href="https://www.deped.gov.ph/" target="_blank"><img src="admin/images/testi/Department_of_Education.png" class="img-fluid mx-auto d-block" alt="seal"></a></div>
+                            <div><a href="https://privacy.gov.ph/transparency-seal/" target="_blank"><img src="admin/images/testi/TransSeal.png" class="img-fluid mx-auto d-block" alt="seal"></a></div>
+                            <div><a href="https://www.foi.gov.ph/" target="_blank"><img src="admin/images/testi/freedomOfInfo.png" class="img-fluid mx-auto d-block" alt="seal"></a></div>
+                        </div>
+                    </div><!--end col-->
+                </div><!--end row-->
+            </div><!--end container-->
+        </section><!--end section-->
+        <!-- Seals End -->
+
+        <!-- Footer Start -->
+        <footer class="footer py-5 bg-dark">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-12 mt-4 pt-2 mt-lg-0 pt-lg-0">
+                        <a class="footer-logo back-to-top" href="#">DepEd Manila</a>
+                        <ul class="list-unstyled footer-list mt-4 mb-0">
+                            <li class="mt-2">
+                                <div id="iframeMap"></div>
+                            </li>
+                            <li class="mt-2"><a href="https://maps.app.goo.gl/AbUywY5V5tqUJjDd9" class="text-foot" target="--blank"><i class="mdi mdi-map-marker"></i> Address: Manila Education Center Arroceros Forest Park Antonio J. Villegas St. Ermita, Manila</a></li>
+                            <li class="mt-2"><a href="javascript:void(0)" class="text-foot"><i class="mdi mdi-phone"></i> Contact Details: 85275216 • 85275009 • 87351029</a></li>
+                            <li class="mt-2"><a href="javascript:void(0)" class="text-foot"><i class="mdi mdi-email"></i> Email Address: sdo.manila@deped.gov.ph</a></li>
+                        </ul>
+                        <ul class="list-unstyled social-icon social mb-0 mt-4">
+                            <li class="list-inline-item"><a href="https://www.facebook.com/DepEdManilaOfficial/" target="__blank"><i class="mdi mdi-facebook" title="Facebook"></i></a></li>
+                            <li class="list-inline-item"><a href="https://www.youtube.com/@depedmanilaYT" target="__blank"><i class="mdi mdi-youtube" title="Youtube"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-4 col-md-12 mt-4 pt-2 mt-lg-0 pt-lg-0">
+                        <h4 class="text-light text-uppercase footer-head"><img src="admin/images/testi/footlogo.png" alt="logo" style="height: 20px; width:20px;"> REPUBLIC OF THE PHILIPPINES</h4>
+                        <ul class="list-unstyled footer-list mt-4 mb-0">
+
+                            <ul class="list-unstyled text-foot mt-4 mb-0">
+                                <li>All content is in the public domain unless otherwise state</li>
+                            </ul>
+
+                            <ul class="list-unstyled text-foot mt-4 mb-0">
+                                <h4 class="text-light text-uppercase footer-head">ABOUT GOVPH</h4>
+                                <li>Learn more about the Philippine government, its structure, how government works and the people behind it.</li>
+                            </ul>
+
+                            <li class="mt-2"><a href="https://www.gov.ph/" class="text-foot" target="__blank"><i class="mdi mdi-chevron-right mr-2"></i> GOV.PH</a></li>
+                            <li class="mt-2"><a href="https://www.officialgazette.gov.ph/" class="text-foot" target="__blank"><i class="mdi mdi-chevron-right mr-2"></i> Official Gazette</a></li>
+                            <li class="mt-2"><a href="https://data.gov.ph/index/home" class="text-foot" target="__blank"><i class="mdi mdi-chevron-right mr-2"></i> Open Data Portal</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-4 col-md-12 mt-4 pt-2 mt-lg-0 pt-lg-0">
+                        <h4 class="text-light text-uppercase footer-head">GOVERNMENT LINKS</h4>
+                        <ul class="list-unstyled footer-list mt-4 mb-0">
+                            <li class="mt-2"><a href="https://president.gov.ph/" class="text-foot" target="__blank"><i class="mdi mdi-chevron-right mr-2"></i> The President</a></li>
+                            <li class="mt-2"><a href="https://op-proper.gov.ph/" class="text-foot" target="__blank"><i class="mdi mdi-chevron-right mr-2"></i> Office of the President</a></li>
+                            <li class="mt-2"><a href="https://ovp.gov.ph/" class="text-foot" target="__blank"><i class="mdi mdi-chevron-right mr-2"></i> Office of the Vice President</a></li>
+                            <li class="mt-2"><a href="http://senate.gov.ph/" class="text-foot" target="__blank"><i class="mdi mdi-chevron-right mr-2"></i> Senate of the Philippines</a></li>
+                            <li class="mt-2"><a href="https://www.congress.gov.ph/" class="text-foot" target="__blank"><i class="mdi mdi-chevron-right mr-2"></i> House of Representatives</a></li>
+                            <li class="mt-2"><a href="http://sc.judiciary.gov.ph/" class="text-foot" target="__blank"><i class="mdi mdi-chevron-right mr-2"></i> Supreme Court</a></li>
+                            <li class="mt-2"><a href="http://ca.judiciary.gov.ph/" class="text-foot" target="__blank"><i class="mdi mdi-chevron-right mr-2"></i> Court of Appeals</a></li>
+                            <li class="mt-2"><a href="https://sb.judiciary.gov.ph/" class="text-foot" target="__blank"><i class="mdi mdi-chevron-right mr-2"></i> Sandiganbayan</a></li>
+                        </ul>
+                    </div>
+                </div><!--end row-->
+            </div><!--end container-->
+        </footer><!--end footer-->
+        <footer class="footer py-4 footer-bar bg-dark">
+            <div class="container text-foot text-center">
+                <div class="row align-items-center">
+                    <div class="col-sm-8">
+                        <div class="text-sm-left">
+                            <p class="mb-0">© <script>document.write(new Date().getFullYear())</script> DepEd Manila</p>
+                        </div>
+                    </div><!--end col-->
+
+                    <div class="col-sm-4 mt-4 mt-sm-0 pt-2 pt-sm-2">
+                        <div class="text-sm-right">
+                            <a href="#" class="back-to-top rounded d-inline-block text-center" id="back-to-top"> 
+                                <i class="mdi mdi-chevron-up d-block"> </i> 
+                            </a>
+                        </div>                            
+                    </div><!--end col-->
+                </div><!--end row-->
+            </div><!--end container-->
+        </footer>
+        <!-- script for iframemap -->
+        <script>
+            var iframe = document.createElement('iframe');
+            iframe.src = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3861.098170372408!2d120.97733074485951!3d14.593481546190377!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397ca193384e579%3A0x3ccfd17de8fccab2!2sManila%20Education%20Center!5e0!3m2!1sen!2sph!4v1709198496267!5m2!1sen!2sph";
+            iframe.frameBorder = "0";
+            iframe.style.width = "100%";
+            iframe.loading = "lazy";
+            iframe.defer = true;
+            document.getElementById('iframeMap').appendChild(iframe);
+        </script>
+        <!-- Footer End -->
+        <!-- Scripts -->
+        <!-- javascript -->
+        <script src="admin/js/home/jquery-3.7.1.min.js"></script>
+        <script src="admin/js/home/bootstrap.bundle.min.js"></script>
+        <script src="admin/js/home/jquery.easing.min.js"></script>
+        <script src="admin/js/home/scrollspy.min.js"></script>
+        <script src="admin/js/home/menu.js"></script>
+        <!-- Magnific Popup -->
+        <script src="admin/js/home/jquery.magnific-popup.min.js"></script>
+        <!-- Slider -->
+        <script src="admin/js/home/slick.min.js "></script>
+        <!-- Main Js -->
+        <script src="admin/js/home/app.js"></script>
+        <!-- <script src="admin/js/home/bootstrap.bundle1.min.js"></script> -->
+                
+    </body>
+
+</html>
+<style>
+/* Ensure that the demo table scrolls */
+    th, td { white-space: nowrap; }
+    div.dataTables_wrapper {
+        margin: 0 auto;
+        overflow-x: scroll;
+    }
+ 
+    tr { height: 50px; }
+</style>
+<script>
+    // Sample data for invitations
+    const invitations = [
+        {
+            publishDate: '2025-01-01',
+            closingDate: '2025-01-15',
+            procurementMode: 'Open Competitive Bidding',
+            referenceNumber: 'INV-001',
+            title: 'Invitation for Bidding: Construction of School Building',
+            link: 'https://example.com/invitation/001'
+        },
+        {
+            publishDate: '2025-01-03',
+            closingDate: '2025-01-20',
+            procurementMode: 'Limited Source Bidding',
+            referenceNumber: 'INV-002',
+            title: 'Invitation for Bidding: Supply of Computers',
+            link: 'https://example.com/invitation/002'
+        },
+        {
+            publishDate: '2025-01-05',
+            closingDate: '2025-01-25',
+            procurementMode: 'Direct Contracting',
+            referenceNumber: 'INV-003',
+            title: 'Invitation for Bidding: Procurement of Office Supplies',
+            link: 'https://example.com/invitation/003'
+        }
+    ];
+
+    // Function to populate the table with invitation data
+    function populateInvitationTable() {
+        const tableBody = document.getElementById('invitation-table-body');
+        tableBody.innerHTML = ''; // Clear the table body before adding new rows
+
+        invitations.forEach(invitation => {
+            const row = document.createElement('tr');
+
+            row.innerHTML = `
+                <td>${invitation.publishDate}</td>
+                <td>${invitation.closingDate}</td>
+                <td>${invitation.procurementMode}</td>
+                <td>${invitation.referenceNumber}</td>
+                <td><a class="text-primary" href="${invitation.link}" target="_blank">${invitation.title}</a></td>
+            `;
+
+            tableBody.appendChild(row);
+        });
+    }
+
+    // Call the function to populate the table when the page loads
+    window.onload = populateInvitationTable;
+
+    // Sample data for Transparency Board Files
+    const transparencyBoardFiles = [
+        { title: "Procurement File 1", link: "https://example.com/file1" },
+        { title: "Procurement File 2", link: "https://example.com/file2" },
+        { title: "Procurement File 3", link: "https://example.com/file3" }
+    ];
+
+    // Sample data for Procurement Files categorized by type and year
+    const procurementFiles = [
+        {
+            ptype: "Construction",
+            years: [
+                {
+                    pyear: 2025,
+                    files: [
+                        { title: "Construction of School Building", link: "https://example.com/cons1" },
+                        { title: "Construction of Office Building", link: "https://example.com/cons2" }
+                    ]
+                },
+                {
+                    pyear: 2024,
+                    files: [
+                        { title: "Construction of Road", link: "https://example.com/cons3" }
+                    ]
+                }
+            ]
+        },
+        {
+            ptype: "Supply",
+            years: [
+                {
+                    pyear: 2025,
+                    files: [
+                        { title: "Supply of Computers", link: "https://example.com/supply1" },
+                        { title: "Supply of Office Chairs", link: "https://example.com/supply2" }
+                    ]
+                }
+            ]
+        }
+    ];
+
+    // Function to populate Transparency Board Files table
+    function populateTransparencyBoardTable() {
+        const tableBody = document.getElementById('transparency-board-table-body');
+        transparencyBoardFiles.forEach(file => {
+            const row = document.createElement('tr');
+            row.innerHTML = `<td><a class="text-primary" href="${file.link}" target="_blank">${file.title}</a></td>`;
+            tableBody.appendChild(row);
+        });
+    }
+
+    // Function to populate the Accordion with Procurement Files
+    function populateProcurementFilesAccordion() {
+        const accordionContainer = document.getElementById('accordionFlushExample');
+
+        procurementFiles.forEach(procurement => {
+            const accordionItem = document.createElement('div');
+            accordionItem.className = 'accordion-item';
+
+            const accordionHeader = document.createElement('h2');
+            accordionHeader.className = 'accordion-header';
+            accordionHeader.id = `flush-heading-${procurement.ptype}`;
+
+            const accordionButton = document.createElement('button');
+            accordionButton.className = 'accordion-button';
+            accordionButton.type = 'button';
+            accordionButton.setAttribute('data-bs-toggle', 'collapse');
+            accordionButton.setAttribute('data-bs-target', `#flush-collapse-${procurement.ptype}`);
+            accordionButton.setAttribute('aria-expanded', 'true');
+            accordionButton.setAttribute('aria-controls', `flush-collapse-${procurement.ptype}`);
+            accordionButton.textContent = procurement.ptype;
+
+            accordionHeader.appendChild(accordionButton);
+
+            const accordionCollapse = document.createElement('div');
+            accordionCollapse.id = `flush-collapse-${procurement.ptype}`;
+            accordionCollapse.className = 'accordion-collapse collapse';
+            accordionCollapse.setAttribute('aria-labelledby', `flush-heading-${procurement.ptype}`);
+            accordionCollapse.setAttribute('data-bs-parent', '#accordionFlushExample');
+
+            const accordionBody = document.createElement('div');
+            accordionBody.className = 'accordion-body';
+
+            procurement.years.forEach(year => {
+                const nestedItem = document.createElement('div');
+                nestedItem.className = 'accordion-item';
+
+                const nestedHeader = document.createElement('h2');
+                nestedHeader.className = 'accordion-header';
+                nestedHeader.id = `nested-heading-${procurement.ptype}-${year.pyear}`;
+
+                const nestedButton = document.createElement('button');
+                nestedButton.className = 'accordion-button collapsed';
+                nestedButton.type = 'button';
+                nestedButton.setAttribute('data-bs-toggle', 'collapse');
+                nestedButton.setAttribute('data-bs-target', `#nested-collapse-${procurement.ptype}-${year.pyear}`);
+                nestedButton.setAttribute('aria-expanded', 'false');
+                nestedButton.setAttribute('aria-controls', `nested-collapse-${procurement.ptype}-${year.pyear}`);
+                nestedButton.textContent = year.pyear;
+
+                nestedHeader.appendChild(nestedButton);
+
+                const nestedCollapse = document.createElement('div');
+                nestedCollapse.id = `nested-collapse-${procurement.ptype}-${year.pyear}`;
+                nestedCollapse.className = 'accordion-collapse collapse';
+                nestedCollapse.setAttribute('aria-labelledby', `nested-heading-${procurement.ptype}-${year.pyear}`);
+                nestedCollapse.setAttribute('data-bs-parent', `#flush-collapse-${procurement.ptype}`);
+
+                const nestedBody = document.createElement('div');
+                nestedBody.className = 'accordion-body';
+
+                const fileList = document.createElement('ul');
+                year.files.forEach(file => {
+                    const listItem = document.createElement('li');
+                    const fileLink = document.createElement('a');
+                    fileLink.className = 'text-primary';
+                    fileLink.href = file.link;
+                    fileLink.target = '_blank';
+                    fileLink.textContent = file.title;
+                    listItem.appendChild(fileLink);
+                    fileList.appendChild(listItem);
+                });
+
+                nestedBody.appendChild(fileList);
+                nestedCollapse.appendChild(nestedBody);
+                nestedItem.appendChild(nestedHeader);
+                nestedItem.appendChild(nestedCollapse);
+                accordionBody.appendChild(nestedItem);
+            });
+
+            accordionCollapse.appendChild(accordionBody);
+            accordionItem.appendChild(accordionHeader);
+            accordionItem.appendChild(accordionCollapse);
+            accordionContainer.appendChild(accordionItem);
+        });
+    }
+
+    // Initialize both functions on page load
+    window.onload = () => {
+        populateTransparencyBoardTable();
+        populateProcurementFilesAccordion();
+    };
+</script>

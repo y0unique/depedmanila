@@ -2,7 +2,7 @@
   "rewrites": [
     {
       "source": "/:slug",
-      "destination": "/:slug.php"
+      "destination": "/:slug.html"
     }
   ],
   "redirects": [
@@ -19,11 +19,11 @@
   ],
   "headers": [
     {
-      "source": "/(.*).php",
+      "source": "/(.*).html",
       "headers": [
         {
           "key": "Content-Type",
-          "value": "application/x-httpd-php"
+          "value": "text/html"
         }
       ]
     }

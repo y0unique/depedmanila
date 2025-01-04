@@ -2,7 +2,7 @@
     <html lang="en">
     <head>
         <meta charset="utf-8" />
-        <title>History | Deped Manila</title>
+        <title>Directory of Schools | Deped Manila</title>
         <meta name="viewport"    content="width=device-width, initial-scale=1.0">
         <meta name="description" content="Department of Education Manila" />
         <meta name="keywords"    content="DepEd, Manila, Schools Division, Division of City Schools, Website of DepEd Manila, Official Website" />
@@ -18,19 +18,13 @@
         <!-- Slider -->        
         <link rel="stylesheet" href="admin/css/home/slick-theme.css"/>
         <link rel="stylesheet" href="admin/css/home/slick.css"/>
+        
+        <!-- Data Table -->
+        <link rel="stylesheet" href="admin/datatables/dataTables.bootstrap5.min.css">
+		<script defer src="admin/datatables/dataTables.fixedColumns.min.js"></script>
 
-        <!-- for history --> 
-        <link rel="stylesheet" type="text/css" href="admin/css/home/history.css">
-        <script>
-            document.addEventListener('contextmenu', function (e) {
-                e.preventDefault();
-            });
-            document.addEventListener('keydown', function (e) {
-                if (e.code === 'KeyU' && (e.ctrlKey || e.metaKey)) {
-                    e.preventDefault();
-                }
-            });
-        </script>
+        <!-- Scripts -->
+        <script defer src="admin/js/home/script.js"></script>
     </head>
 
     <!-- preloader -->
@@ -112,9 +106,9 @@
                             </a>
         
                             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <a class="dropdown-item" href="#home" id="history">History</a>
+                                <a class="dropdown-item" href="history.html" id="history">History</a>
                                 <a class="dropdown-item" href="mission-vision.html" id="visionMision">Mission, Vision.  <br>Core Values, Quality Objectives</a>
-                                <a class="dropdown-item" href="directory.html" id="directory">Directory</a>
+                                <a class="dropdown-item" href="#home" id="directory">Directory</a>
                                 <a class="dropdown-item" href="underconstruction.html" id="citizenscharter">Citizen's Charter</a>
                             </div>
                         </li>
@@ -223,108 +217,38 @@
         </nav><!--end navbar-->
         <!-- Navbar End -->
         
-        <!-- Breadcrumbs Start -->
-        <section class="section" id="home">
+        <!-- Directory of Schools Start -->
+        <section class="section bg-light" id="home">
             <div class="container">
-
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a class="text-custom" href="index.html">Home</a></li>
+                        <li class="breadcrumb-item"><a class="text-custom" href="index.php">Home</a></li>
                         <li class="breadcrumb-item" aria-current="page">About Us</li>
-                        <li class="breadcrumb-item active" aria-current="page">History</li>
+                        <li class="breadcrumb-item active" aria-current="page">Directory</li>
                     </ol>
                 </nav>
-
+        
                 <div class="row justify-content-center">
                     <div class="col-12 text-center">
                         <div class="section-title">
-                            <h4 class="title text-uppercase mb-4">History</h4>
-                            <p class="text-dark text-left mx-auto para-desc mb-0">
-                                
-                            &ensp;&ensp;The City of Manila is divided into 6 congressional districts with 16 administrative districts, 100 zones and 897 barangays. Tondo, with 24 zones is divided into two-Tondo 1 which is the first congressional district and Tondo II, the second congressional district. District III has 16 zones which includes Binondo, Quiapo, San Nicolas and Sta. Cruz. District IV, with 17 zones, is comprised of Sampaloc alone. District V, with 32 zones, includes Ermita. Intramuros, Malate, Paco, Port Area and San Andres. District VI, with 11 zones is comprised of San Miguel, Pandacan, Sta. Ana and Sta. Mesa.<hr>
-
-
-                            </p>
+                            <h4 class="title text-uppercase mb-4">Directory of Schools</h4>
+                            <p class="text-danger mx-auto para-desc mb-0" style="font-style: italic;">*To look for a school, please use the search field to filter the table.*</p>
                         </div>
                     </div><!--end col-->
                 </div><!--end row-->
-                
-                <div class="row justify-content-center">
-                    <div class="col-12 text-center">
-                        <div class="section-title">
-                            <h4 class="title text-uppercase mb-4">HISTORY OF DepEd-Manila</h4>
-                            <p class="text-dark text-left mx-auto para-desc mb-0">
-
-                                <div class="">
-                                    <div class="box">
-                                        <ul id="first-list">
-                                            <li>
-                                                <span></span>
-                                                <div class="title"></div>
-                                                <div class="info text-dark">The marshland of Nilad that was the ancient kingdom of Rajah Soliman entered the pages of history when Legaspi founded on June 24, 1571 within the walls of Intramurous the Ever Loyal and Nolbe City that would be Manila.</div>
-                                                <div class="name"></div>
-                                                <div class="time">
-                                                </div>
-                                            </li>
-
-                                            <li>
-                                                <span></span>
-                                                <div class="title"></div>
-                                                <div class="info text-dark">With the Spaniards, came the missionaries and religious orders who introduced formal instruction in the classrooms. The Jesuits established colleges for boys. The Colegio de San Ignacio (1589) in Manila, the Colegio de San Ildefonso (1595) in Cebu, and Colegio de San Jose (1601). Later, Universities were established: The University of Sto. Tomas in 1611 and the Ateneo de Manila in 1630. The educational decree of 183 established a system of supervision as well as normal school for teachers.</div>
-                                                <div class="name"></div>
-
-                                                <div class="time">
-                                                </div>
-                                            </li> 
-
-                                            <li>
-                                                <span></span>
-                                                <div class="title"></div>
-                                                <div class="info text-dark">Following the defeat of the Spanish Armada in the Battle of Manila Bay and the American Occupation of Manila on August 13,1898, seven schools were opened, namely: Manila High School (now Araullo High School), Concepcion Primary School for Girls, Concepcion Primary school for Boys, First Binondo Girls' School (now P. Guevarra Elementary School), and San Miguel Primary School - all existing schools during the Spanish regime. Filipino and Spanish teachers provided instruction. These schools formed the Nucleus of what later was to become the public school system provided by Act No. 74, enacted by the Philippine Commission on January 21, 1901.</div>
-                                                <div class="name"></div>
-                                                <div class="time">
-                                                </div>
-                                            </li>    
-
-                                            <li>
-                                                <span></span>
-                                                <div class="title"></div>
-                                                <div class="info text-dark">Drawing inspiration from the rich and colorful history, DepEd Manila accelerated its momentum of ascension and expansion towards excellence and become what is known today - the premiere school division of the country.</div>
-                                                <div class="name"></div>
-                                                <div class="time">
-                                                </div>
-                                            </li>  
-
-                                            <li>
-                                                <span></span>
-                                                <div class="title"></div>
-                                                <div class="info text-dark">DepEd Manila boasts of the best school buildings, the best teachers and students in the country. Its strong leadership provide direction for the growth and development of schools nationwide. Its educational innovations and achievements in the various field of education make up the flag colors of DepEd.</div>
-                                                <div class="name"></div>
-                                                <div class="time">
-                                                </div>
-                                            </li>  
-
-                                            <li>
-                                                <span></span>
-                                                <div class="title"></div>
-                                                <div class="info text-dark">Today, DepEd Manila is a school division of 73 public elementary schools and 32 secondary schools sprad over the six congressional districts of the City.</div>
-                                                <div class="name"></div>
-                                                <div class="time">
-                                                </div>
-                                            </li> 
-                                        </ul>
-                                        
-                                    </div>
-                                </div> 
-
-                            </p>
-                        </div>
+        
+                <div class="row mt-4">
+                    <div class="col-12">
+                        <!-- Tab navigation -->
+                        <ul class="nav nav-pills nav-justified" id="pills-tab" role="tablist"></ul><!--end nav pills-->
+        
+                        <!-- Tab content -->
+                        <div class="tab-content mt-3" id="pills-tabContent"></div><!--end tab content-->
                     </div><!--end col-->
                 </div><!--end row-->
-
             </div><!--end container-->
         </section><!--end section-->
-        <!-- Breadcrumbs End -->
+        <!-- Directory of Schools End -->
 
         <!-- Seals Start -->
         <section class="section-two">
@@ -441,8 +365,297 @@
         <script src="admin/js/home/slick.min.js "></script>
         <!-- Main Js -->
         <script src="admin/js/home/app.js"></script>
-
-                
+    
     </body>
-
+    
+    <script src="admin/vendor/datatables/jquery.dataTables.min.js"></script>
+    <script src="admin/vendor/datatables/dataTables.bootstrap4.min.js"></script>
 </html>
+<!-- style for table -->
+<style>
+/* Ensure that the demo table scrolls */
+    th, td { white-space: nowrap; }
+    div.dataTables_wrapper {
+        margin: 0 auto;
+        overflow-x: scroll;
+    }
+ 
+    tr { height: 50px; }
+    /* table{ 
+        width: 100% !important;
+        table-layout: fixed;
+    } */
+</style>
+
+<!-- sample data for schools -->
+<script>
+    // Sample data for schools
+    const schoolData = {
+        "elementary-school": {
+            title: "ELEMENTARY SCHOOLS",
+            icon: "mdi-chair-school",
+            schools: [
+                {
+                    district: "District 1",
+                    schoolId: "101",
+                    schoolName: "Elementary School A",
+                    address: "123 Street, City",
+                    principal: "Jane Doe",
+                    contact: "123456789",
+                    email: "schoola@example.com"
+                },
+                {
+                    district: "District 2",
+                    schoolId: "102",
+                    schoolName: "Elementary School B",
+                    address: "456 Avenue, City",
+                    principal: "John Smith",
+                    contact: "987654321",
+                    email: "schoolb@example.com"
+                }
+            ]
+        },
+        "junior-high-school": {
+            title: "JUNIOR HIGH SCHOOLS",
+            icon: "mdi-bus-school",
+            schools: [
+                {
+                    district: "District 1",
+                    schoolId: "101",
+                    schoolName: "Junior High School A",
+                    address: "123 Street, City",
+                    principal: "Jane Doe",
+                    contact: "123456789",
+                    email: "schoola@example.com"
+                },
+                {
+                    district: "District 2",
+                    schoolId: "102",
+                    schoolName: "Junior High School B",
+                    address: "456 Avenue, City",
+                    principal: "John Smith",
+                    contact: "987654321",
+                    email: "schoolb@example.com"
+                }
+            ]
+        },
+        "senior-high-school": {
+            title: "SENIOR HIGH SCHOOLS",
+            icon: "mdi-school",
+            schools: [
+                {
+                    district: "District 1",
+                    schoolId: "101",
+                    schoolName: "Senior High School A",
+                    address: "123 Street, City",
+                    principal: "Jane Doe",
+                    contact: "123456789",
+                    email: "schoola@example.com"
+                },
+                {
+                    district: "District 2",
+                    schoolId: "102",
+                    schoolName: "Senior High School B",
+                    address: "456 Avenue, City",
+                    principal: "John Smith",
+                    contact: "987654321",
+                    email: "schoolb@example.com"
+                }
+            ]
+        },
+        "special-education": {
+            title: "SPECIAL EDUCATION CENTERS",
+            icon: "mdi-star-outline",
+            schools: [
+                {
+                    district: "District 1",
+                    schoolId: "101",
+                    schoolName: "Special Education Center A",
+                    address: "123 Street, City",
+                    principal: "Jane Doe",
+                    contact: "123456789",
+                    email: "schoola@example.com"
+                },
+                {
+                    district: "District 2",
+                    schoolId: "102",
+                    schoolName: "Special Education Center B",
+                    address: "456 Avenue, City",
+                    principal: "John Smith",
+                    contact: "987654321",
+                    email: "schoolb@example.com"
+                }
+            ]
+        }
+    };
+
+    // Populate tabs and tab content dynamically
+    const pillsTab = document.getElementById("pills-tab");
+    const pillsTabContent = document.getElementById("pills-tabContent");
+
+    Object.keys(schoolData).forEach((key, index) => {
+        const { title, icon, schools } = schoolData[key];
+        const isActive = index === 0 ? "active" : "";
+        const isShow = index === 0 ? "show active" : "";
+
+        // Create tab navigation
+        const navItem = document.createElement("li");
+        navItem.className = "nav-item mb-4 pt-2";
+        navItem.innerHTML = `
+            <a class="nav-link ${isActive}" id="${key}-tab" data-toggle="pill" href="#${key}" role="tab" aria-controls="${key}" aria-selected="${isActive}">
+                <div class="capabilities text-center rounded pt-2 pb-2">
+                    <div class="icon bg-custom mb-3">
+                        <i class="mdi ${icon} text-white"></i>
+                    </div>
+                    <h4 class="title font-weight-normal mb-0">${title}</h4>
+                </div>
+            </a>
+        `;
+        pillsTab.appendChild(navItem);
+
+        // Create tab content
+        const tabPane = document.createElement("div");
+        tabPane.className = `tab-pane fade ${isShow}`;
+        tabPane.id = key;
+        tabPane.setAttribute("role", "tabpanel");
+        tabPane.setAttribute("aria-labelledby", `${key}-tab`);
+
+        const schoolsTableRows = schools
+            .map(
+                (school) => `
+                <tr>
+                    <td>${school.district}</td>
+                    <td>${school.schoolId}</td>
+                    <td>${school.schoolName}</td>
+                    <td>${school.address}</td>
+                    <td>${school.principal}</td>
+                    <td>${school.contact}</td>
+                    <td>${school.email}</td>
+                </tr>
+            `
+            )
+            .join("");
+
+        tabPane.innerHTML = `
+            <div class="capabilities-content border rounded p-4">
+                <div class="row align-items-center">
+                    <div class="col-md-12">
+                        <h4 class="title">${title}</h4>
+                        <table id="${key}-table" class="table table-striped" style="width:100%">
+                            <thead>
+                                <tr>
+                                    <th>District</th>
+                                    <th>School ID</th>
+                                    <th>School</th>
+                                    <th>School Address</th>
+                                    <th>Principal</th>
+                                    <th>Contact #</th>
+                                    <th>Email</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                ${schoolsTableRows || '<tr><td colspan="7" class="text-center">No data available</td></tr>'}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        `;
+        pillsTabContent.appendChild(tabPane);
+    });
+</script>
+
+<!-- script for fetchdata -->
+<!-- <script>
+$(document).ready(function() {
+    // Function to initialize DataTables
+    function initializeDataTables() {
+        $('#elementary-school-table').DataTable({
+            "fnCreatedRow": function(nRow, aData, iDataIndex) {
+                $(nRow).attr('id', aData[0]);
+            },
+            'serverSide': 'true',
+            'processing': 'true',
+            'paging': 'true',
+            'order': [],
+            'ajax': {
+                'url': 'admin/includes/fetchdata/elemschoolfetch.php',
+                'type': 'post',
+            },
+            "columnDefs": [{
+                'target': [0, 7],
+                'orderable': false
+            }]
+        });
+
+        $('#junior-high-school-table').DataTable({
+            "fnCreatedRow": function(nRow, aData, iDataIndex) {
+                $(nRow).attr('id', aData[0]);
+            },
+            'serverSide': 'true',
+            'processing': 'true',
+            'paging': 'true',
+            'order': [],
+            'ajax': {
+                'url': 'admin/includes/fetchdata/jhschoolfetch.php',
+                'type': 'post',
+            },
+            "columnDefs": [{
+                'target': [0, 7],
+                'orderable': false
+            }]
+        });
+
+        $('#senior-high-school-table').DataTable({
+            "fnCreatedRow": function(nRow, aData, iDataIndex) {
+                $(nRow).attr('id', aData[0]);
+            },
+            'serverSide': 'true',
+            'processing': 'true',
+            'paging': 'true',
+            'order': [],
+            'ajax': {
+                'url': 'admin/includes/fetchdata/shschoolfetch.php',
+                'type': 'post',
+            },
+            "columnDefs": [{
+                'target': [0, 7],
+                'orderable': false
+            }]
+        });
+
+        $('#special-education-table').DataTable({
+            "fnCreatedRow": function(nRow, aData, iDataIndex) {
+                $(nRow).attr('id', aData[0]);
+            },
+            'serverSide': 'true',
+            'processing': 'true',
+            'paging': 'true',
+            'order': [],
+            'ajax': {
+                'url': 'admin/includes/fetchdata/spedschoolfetch.php',
+                'type': 'post',
+            },
+            "columnDefs": [{
+                'target': [0, 7],
+                'orderable': false
+            }]
+        });
+    }
+
+    // Call the function initially
+    initializeDataTables();
+
+    // Refresh the DataTables every 5 seconds
+    setInterval(function() {
+        // Destroy existing DataTables instances
+        $('#elementary-school-table').DataTable().destroy();
+        $('#junior-high-school-table').DataTable().destroy();
+        $('#senior-high-school-table').DataTable().destroy();
+        $('#special-education-table').DataTable().destroy();
+
+        // Re-initialize DataTables
+        initializeDataTables();
+    }, 100000); // 10000 milliseconds = 10 mins
+});
+</script> -->

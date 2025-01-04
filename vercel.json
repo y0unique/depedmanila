@@ -1,0 +1,30 @@
+{
+  "rewrites": [
+    {
+      "source": "/:slug",
+      "destination": "/:slug.php"
+    }
+  ],
+  "redirects": [
+    {
+      "source": "../404/",
+      "destination": "../404.php",
+      "permanent": false
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*).php",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "application/x-httpd-php"
+        }
+      ]
+    }
+  ],
+  "error": {
+    "404": "../404.html",
+    "500": "../500.html"
+  }
+}
